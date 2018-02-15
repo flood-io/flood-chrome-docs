@@ -59,16 +59,14 @@ Creates a condition which will wait until the element is located on the page.
 * `text` <[string]> 
 * `returns:` <`Condition`> 
 
-Creates a condition which will wait until the element's text content contains
-the target text.
+Creates a condition which will wait until the element's text content contains the target text.
 
 #### Until.elementTextIs(locatable, text)
 * `locatable` <`Locatable`> 
 * `text` <[string]> 
 * `returns:` <`Condition`> 
 
-Creates a condition which will wait until the element's text exactly matches the target text,
-excluding leading and trailing whitespace.
+Creates a condition which will wait until the element's text exactly matches the target text, excluding leading and trailing whitespace.
 
 #### Until.elementTextMatches(locatable, regex)
 * `locatable` <`Locatable`> 
@@ -86,7 +84,6 @@ Creates a condition that will loop until at least one element is found with the 
 * `returns:` <`Condition`> 
 
 Creates a condition that will wait for the given element to become stale.
-An element is considered stale once it is removed from the DOM, or a new page has loaded.
 
 #### Until.titleContains(title)
 * `title` <[string]> 

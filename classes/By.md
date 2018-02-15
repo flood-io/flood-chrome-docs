@@ -55,8 +55,7 @@ substring and is not hidden by CSS.
 
 * `returns:` <`Locator`> 
 
-Locates all elements whose `textContent` equals the given
-substring and is not hidden by CSS.
+Locates all elements whose `textContent` equals the given substring and is not hidden by CSS.
 
 #### By.xpath(path)
 * `path` <[string]> XPath selector
