@@ -1,5 +1,5 @@
 # By
-null
+By is used to create <[Locator]>'s to find Elements or use in any place which accepts a Locator or <[Locatable]>.
 #### By.attr(tagName, attrName, attrValue)
 * `tagName` <[string]> TagName to scope selection to
 * `attrName` <[string]> The attribute to search for
