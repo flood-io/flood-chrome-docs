@@ -15,7 +15,12 @@ Navigates to the topmost frame
 #### TargetLocator.frame(id)
 * `returns:` <[Promise]> 
 
-Changes the active target to another frame.
+Accepts either:
+
+number: Switch to frame by index in window.frames,
+string: Switch to frame by frame.name or frame.id, whichever matches first,
+ElementHandle: Switch to a frame using the supplied ElementHandle of a frame.
+
 
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type

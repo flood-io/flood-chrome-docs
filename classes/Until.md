@@ -3,7 +3,13 @@ null
 #### Until.ableToSwitchToFrame()
 * `returns:` <`Condition`> 
 
-Creates a condition that will wait until the input driver is able to switch to the designated frame.
+The target frame may be specified as:
+- numeric index into window.frames for the currently selected frame.
+- ElementHandle, which must references a FRAME or IFRAME element on the current page.
+- locator which may be used to first locate a FRAME or IFRAME on the current page before attempting to switch to it.
+
+Upon successful resolution of this condition, the driver will be left focused on the new frame.
+
 
 #### Until.alertIsPresent(alertText)
 * `alertText` <[string]> 
@@ -46,7 +52,11 @@ Creates a condition that will wait for the given element to be deselected.
 * `locatable` <`Locatable`> 
 * `returns:` <`Condition`> 
 
-Creates a condition that will wait for the given element to be selected.
+Example:
+```ts
+await browser.wait(Until.elementIsVisible(By.partialLinkText("Start")))
+```
+
 
 #### Until.elementLocated(locatable)
 * `locatable` <`Locatable`> 
@@ -83,7 +93,8 @@ Creates a condition that will loop until at least one element is found with the 
 #### Until.stalenessOf(selectorOrLocator)
 * `returns:` <`Condition`> 
 
-Creates a condition that will wait for the given element to become stale.
+An element is considered stale once it is removed from the DOM, or a new page has loaded.
+
 
 #### Until.titleContains(title)
 * `title` <[string]> 

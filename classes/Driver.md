@@ -122,7 +122,9 @@ a new Browser tab for this page to load into.
 #### Driver.wait(timeoutOrCondition)
 * `returns:` <[Promise]> 
 
-Creates a waiter which will pause the test until a condition is met or a timeout is reached.
+You can use either a numeric value in seconds to wait for a specific time,
+or a {@linkcode Condition}, for more flexible conditions.
+
 
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
