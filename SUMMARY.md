@@ -1,5 +1,7 @@
 # Summary
 
+[Quick Start]#/README.md
+
 ## By
 
  * [By.attr(tagName, attrName, attrValue)](classes/By.md#byattrtagname-attrnameattrvalue)
