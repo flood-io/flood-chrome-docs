@@ -4,6 +4,8 @@
 
 > This project is currently in beta and APIs are subject to change.
 
+![Flood Chrome Example code](./code-snippet.png)
+
 # Quickstart
 
 First, make sure you have installed the [latest version of NodeJS](https://nodejs.org) for your platform.
