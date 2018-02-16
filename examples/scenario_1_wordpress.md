@@ -91,7 +91,7 @@ The second step enables us to interact with a page object on the front page navi
 
 For this step we want to navigate to a particular clothing type - called a 'Hoodie'. To get to this clothing section we need to click on a text based link as shown below:
 
-[The Flood Store - Hoodies Text Link](images/step-2-hoodies.png)
+![The Flood Store - Hoodies Text Link](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-2-hoodies.png)
 
 This type of page interaction is very simple and powerful for normal text based links - we use the following step to achieve this as well as another page text verification to ensure we are on the expected page.
 
@@ -115,7 +115,7 @@ For text links - we can use partialLinkText and also linkText. linkText needs to
 
 Using the Developer Tools feature in Google Chrome we are able to view the exact text of a hyperlink - simply right-click (on Windows) or hold down the CTRL button while clicking on the link and then select Inspect. The Developer Tools sidebar will appear which will automatically highlight the link code for you, as follows:
 
-[Hoodies - Link Text](images/step-3-hoodies-link-code.png)
+![Hoodies - Link Text](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-3-hoodies-link-code.png)
 
 As you can see the link is fairly ugly as it contains a carriage return and a number of spaces on either side of the 'Hoodies' text so definitely a good example of the need to use the partialLinkText function!
 
@@ -136,9 +136,9 @@ Once we have clicked on the 'Hoodies' link we are taken to the Hoodies sub-page 
 
 For the sake of this simple script - we know the hoodie we want to add to the cart has a product ID of 39. We can see this again using the Developer Tools and highlighting the Add to Cart button of the item we'd like to add to our cart:
 
-[Hoodies - Add To Cart button](images/step-3-hoodie-addtocart.png)
+![Hoodies - Add To Cart button](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-3-hoodie-addtocart.png)
 
-[Hoodies - Product ID code](images/step-3-hoodie-product-id.png)
+![Hoodies - Product ID code](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-3-hoodie-product-id.png)
 
 So using the above step XPATH example we can use the following XPATH expression:
 
@@ -174,15 +174,19 @@ We also have the ability to take a Screenshot of this page so we can verify late
 
 # Step 4 - Using CSS Selectors
 
-Using CSS selectors is another way of identifying objects that we would like to interact with. In this step we would like to proceed to the checkout page with the item we slected in Stpe 3 in our shopping cart.
+Using CSS selectors is another way of identifying objects that we would like to interact with. In this step we would like to proceed to the checkout page with the item we selected in Step 3 in our shopping cart.
 
 Again, we need to have a look at the properties of this button and we do this with the Developer Tools feature as well. The properties can be selected using the following steps:
 
 a. Right Click on the Proceed to Checkout and click Inspect - this will bring up the actual line of code of the button object:
 
-[Proceed to Checkout - code](images/step-4-proceed-checkout-code.png)
+![Proceed to Checkout - code](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-4-proceed-checkout-code.png)
 
-b. Click on the ellipsis link (...) and click Copy > Copy selector. This will copy the exact CSS selector path that can be used in your step as follows:
+b. Click on the ellipsis link (...) and click Copy > Copy selector. 
+
+![Proceed to Checkout - copy selector](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-4-copy-selector.png)
+
+This will copy the exact CSS selector path that can be used in your step as follows:
 
 
 ```typescript
