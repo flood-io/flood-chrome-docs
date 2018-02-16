@@ -1,5 +1,5 @@
 # By
-null
+By is used to create <[Locator]>'s to find Elements or use in any place which accepts a Locator or <[Locatable]>.
 #### By.attr(tagName, attrName, attrValue)
 * `tagName` <[string]> TagName to scope selection to
 * `attrName` <[string]> The attribute to search for
@@ -55,8 +55,7 @@ substring and is not hidden by CSS.
 
 * `returns:` <`Locator`> 
 
-Locates all elements whose `textContent` equals the given
-substring and is not hidden by CSS.
+Locates all elements whose `textContent` equals the given substring and is not hidden by CSS.
 
 #### By.xpath(path)
 * `path` <[string]> XPath selector
@@ -66,4 +65,5 @@ substring and is not hidden by CSS.
 Locates an element using an XPath expression
 
 
+[By]: classes/By.md
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type

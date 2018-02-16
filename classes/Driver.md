@@ -23,7 +23,8 @@ Clear browser cache.
 
 Clear browser cookies.
 
-#### Driver.click(selectorOrLocator, options)
+#### Driver.click(locatable, options)
+* `locatable` <`Locatable`> 
 * `options` <`ClickOptions`> 
 * `returns:` <[Promise]> 
 
@@ -39,7 +40,7 @@ Sends a double-click event to the element located by the supplied Locator or `se
 currently outside the viewport it will first scroll to that element.
 
 #### Driver.emulateDevice(deviceName)
-* `deviceName` <`Device`> 
+* `deviceName` <[Device]> 
 * `returns:` <[Promise]> 
 
 Configure Browser to emulate a given device
@@ -122,8 +123,14 @@ a new Browser tab for this page to load into.
 #### Driver.wait(timeoutOrCondition)
 * `returns:` <[Promise]> 
 
-Creates a waiter which will pause the test until a condition is met or a timeout is reached.
+You can use either a numeric value in seconds to wait for a specific time,
+or a {@linkcode Condition}, for more flexible conditions.
 
 
+
+[By]: classes/By.md
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+[Condition]: classes/Condition.md
+[Driver]: classes/Driver.md
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[Device]: Enumerations.md/#device
