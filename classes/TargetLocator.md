@@ -15,6 +15,8 @@ Navigates to the topmost frame
 #### TargetLocator.frame(id)
 * `returns:` <[Promise]> 
 
+Changes the active target to another frame.
+
 Accepts either:
 
 number: Switch to frame by index in window.frames,

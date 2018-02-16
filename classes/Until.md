@@ -1,8 +1,12 @@
 # Until
+Until is used to create wait <[Conditions]> which are used to wait for elements to become active, visible, invisible or disabled on the page.
+
 You would typically use these to control the flow of you test.
 
 #### Until.ableToSwitchToFrame()
 * `returns:` <[Condition]> 
+
+Creates a condition that will wait until the input driver is able to switch to the designated frame.
 
 The target frame may be specified as:
 - numeric index into window.frames for the currently selected frame.
@@ -41,6 +45,8 @@ Creates a condition that will wait for the given element to be in the DOM, yet n
 * `locatable` <`Locatable`> 
 * `returns:` <[Condition]> 
 
+Creates a condition that will wait for the given element to become visible.
+
 Example:
 ```typescript
 step("Step 1", async browser => {
@@ -59,6 +65,8 @@ Creates a condition that will wait for the given element to be deselected.
 #### Until.elementIsVisible(locatable)
 * `locatable` <`Locatable`> 
 * `returns:` <[Condition]> 
+
+Creates a condition that will wait for the given element to be selected.
 
 Example:
 ```typescript
@@ -102,6 +110,8 @@ Creates a condition that will loop until at least one element is found with the 
 
 #### Until.stalenessOf(selectorOrLocator)
 * `returns:` <[Condition]> 
+
+Creates a condition that will wait for the given element to become stale.
 
 An element is considered stale once it is removed from the DOM, or a new page has loaded.
 
