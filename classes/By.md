@@ -65,4 +65,5 @@ Locates all elements whose `textContent` equals the given substring and is not h
 Locates an element using an XPath expression
 
 
+[By]: classes/By.md
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type

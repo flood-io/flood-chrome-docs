@@ -23,6 +23,12 @@ ElementHandle: Switch to a frame using the supplied ElementHandle of a frame.
 
 
 
+[By]: classes/By.md
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+[Condition]: classes/Condition.md
+[Driver]: classes/Driver.md
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [Device]: Enumerations.md/#device
+[ElementHandle]: classes/ElementHandle.md
+[Locator]: classes/Locator.md
+[TargetLocator]: classes/TargetLocator.md
