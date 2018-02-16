@@ -25,3 +25,4 @@ ElementHandle: Switch to a frame using the supplied ElementHandle of a frame.
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[Device]: Enumerations.md/#device

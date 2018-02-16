@@ -41,7 +41,7 @@ Creates a condition that will wait for the given element to be in the DOM, yet n
 * `returns:` <`Condition`> 
 
 Example:
-```ts
+```typescript
 step("Step 1", async browser => {
 	 await browser.click(By.css('.hide-panel'))
   await browser.wait(Until.elementIsNotVisible(By.id("btn")))
@@ -60,7 +60,7 @@ Creates a condition that will wait for the given element to be deselected.
 * `returns:` <`Condition`> 
 
 Example:
-```ts
+```typescript
 step("Step 1", async browser => {
   await browser.wait(Until.elementIsVisible(By.partialLinkText("Start")))
 })
@@ -144,3 +144,4 @@ Creates a condition which waits until the page URL matches the supplied `RegExp`
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[Device]: Enumerations.md/#device

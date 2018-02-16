@@ -40,7 +40,7 @@ Sends a double-click event to the element located by the supplied Locator or `se
 currently outside the viewport it will first scroll to that element.
 
 #### Driver.emulateDevice(deviceName)
-* `deviceName` <`Device`> 
+* `deviceName` <[Device]> 
 * `returns:` <[Promise]> 
 
 Configure Browser to emulate a given device
@@ -130,3 +130,4 @@ or a {@linkcode Condition}, for more flexible conditions.
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[Device]: Enumerations.md/#device
