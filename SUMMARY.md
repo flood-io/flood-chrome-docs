@@ -21,7 +21,7 @@
  * [Driver.clear(locatable)](classes/Driver.md#driverclearlocatable)
  * [Driver.clearBrowserCache()](classes/Driver.md#driverclearbrowsercache)
  * [Driver.clearBrowserCookies()](classes/Driver.md#driverclearbrowsercookies)
- * [Driver.click(selectorOrLocator, options)](classes/Driver.md#driverclickselectororlocator-options)
+ * [Driver.click(locatable, options)](classes/Driver.md#driverclicklocatable-options)
  * [Driver.doubleClick(locatable, options)](classes/Driver.md#driverdoubleclicklocatable-options)
  * [Driver.emulateDevice(deviceName)](classes/Driver.md#driveremulatedevicedevicename)
  * [Driver.findElement(locator)](classes/Driver.md#driverfindelementlocator)

@@ -23,7 +23,8 @@ Clear browser cache.
 
 Clear browser cookies.
 
-#### Driver.click(selectorOrLocator, options)
+#### Driver.click(locatable, options)
+* `locatable` <`Locatable`> 
 * `options` <`ClickOptions`> 
 * `returns:` <[Promise]> 
 
