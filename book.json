@@ -1,0 +1,18 @@
+{
+  "gitbook": ">= 3.2.1",
+  "title": "Flood Chrome",
+  "plugins": [
+    "edit-link",
+    "prism",
+    "-highlight",
+    "-search",
+    "codeblock-disable-glossary",
+    "anchorjs"
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/flood-io/flood-chrome-docs/tree/master",
+      "label": "Edit This Page"
+    }
+  }
+}
