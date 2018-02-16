@@ -65,7 +65,7 @@ The export default() function is the main area housing all the steps for your bu
 
 The first step we will use contains the step to tell Flood Chrome to visit the initial target URL and to do some page verification to ensure we have successfully landed on the correct page and the page contents is returned as expected.
 
-[The Flood Store - Homepage](images/step-1-homepage.png)
+![The Flood Store - Homepage](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-1-homepage.png)
 
 ```typescript
 	step('The Flood Store: Home', async (browser: Driver) => {
