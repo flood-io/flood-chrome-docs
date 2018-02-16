@@ -50,22 +50,27 @@ This will output a detailed list of steps and configuration options it has read 
 
 #### 4. Run it on [Flood](https://flood.io)
 
-# Why?
+## Why?
 
 Over the years, countless customers have mentioned that getting started with Load Testing is a daunting task. That's why it's often left until the last minute before launch. At Flood, it's our mission to make Load Testing less daunting and accessible to everyone. We want to give developers and testers an easy way to ensure that whatever part of the system they're responsible for meets expectations for both functionality and performance.
 
-# What can I do with it?
+## What can I do with it?
 
 * Flood Chrome can be used to **put load on any web accessible application** and measure how it performs as load is ramped up,
 * **Measure performance regressions** after deploys by integrating it with you CI/CD pipeline,
 * Measure how your application's response time from different regions as experienced by your customers,
 * Create **realistic load scenarios** which stress test your network infrastructure without developing a complex protocol level load test scripts.
 
-# Documentation
+## Documentation
 
 * [Getting Started Guide]()
+* [Writing Scripts]()
 * [Flood Challenge Tutorial]()
-* [Tooling Setup guide]()
+* [Tooling Setup Guide]()
 * [API Documentation]()
 
-# Reporting Issues
+## Reporting Issues
+
+If you encounter any issues with the `@flood/chrome` project or Flood Chrome product, please [open an issue](https://github.com/flood-io/browser-test/issues) on the GitHub project.
+
+If you're encountering issues with Flood itself, please contact Flood Support from within the Flood Dashboard.
