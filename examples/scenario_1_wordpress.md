@@ -1,28 +1,30 @@
-## Flood Chrome Detailed Scenario - Wordpress Shopping Cart
+# Flood Chrome Detailed Scenario - The Flood Merchandise Store
 
-# Overview
+## Overview
 
 This detailed example will show you how to actually build a working Flood Chrome script that uses a variety of different classes to identify objects you would like to interact with in order to successfully simulate a typical business process.
 
 The example uses a site called 'The Flood Store' - a fictional online shopping store that sells Flood IO branded apparel and other clothing items. It is fairly representative of a typical online store that customer's may require to be load tested but is complex enough that using a traditional load test tool such as Jmeter or Gatling requires a lot of work in scripting against.
 
+It is built using Wordpress and the Woocommerce plug-in.
+
 We'll show you how you can achieve creating a full user item purchase scenario quickly and easily using Flood Chrome.
 
-# Tools Used
+## Tools Used
 
-1. Flood IO Account - You will need a Flood IO account in order to run Flood Chrome scripts with more than 1 concurrent user.
-2. Flood CLI (optional) - The CLI tool is a great way to verify your script compiles correctly before running it on the Flood platform.
-3. Google Chrome (optional) - Flood Chrome identifies page objects by individual properties or identifiers. The Google Chrome browser contains the ability to inspect object properties in realtime. These properties are used by the Flood Chrome script in order to interact with the given page object.
+1. **A Flood IO Account** - You will need a Flood IO account in order to run Flood Chrome scripts with more than 1 concurrent user.
+2. **Flood CLI (optional)** - The CLI tool is a great way to verify your script compiles correctly before running it on the Flood platform.
+3. **Google Chrome (optional)** - Flood Chrome identifies page objects by individual properties or identifiers. The Google Chrome browser contains the ability to inspect object properties in realtime. These properties are used by the Flood Chrome script in order to interact with the given page object.
 
-# Download the entire script
+## Download the entire script
 
-Please find the script used in this detailed scenario here: (gist link)
+Please find the script used in this detailed scenario here: **Coming Soon**
 
-# Overview of script configuation settings
+## Overview of script configuation settings
 
 Some initial script parameters need to be stated at the very start of the script - let's delve into them line by line:
 
-*a. import { ... }*
+a. **import { ... }**
 
 ```typescript
 import { step, TestSettings, Until, By, MouseButtons, Device, Driver } from '@flood/chrome'
@@ -34,7 +36,7 @@ The initial import statement allows you to add classes relating to steps, TestSe
 
 The importing of the assert class is useful if you would like to use assertions to capture and verify strings/integers or any data retrieved from objects durign test execution. This can also be reported in the console.
 
-*b. export consts settings { ... }*
+b. **export consts settings { ... }**
 
 ```typescript
 export const settings: TestSettings = {
@@ -57,11 +59,11 @@ This export block allows you to specify constants related to typical Test Settin
 
 - stepDelay: the amount of time in seconds that the Flood Chrome replay engine will wait in between steps.
 
-*c. export default() => { ... }*
+c. **export default() => { ... }**
 
 The export default() function is the main area housing all the steps for your business process.
 
-# Step 1 - Navigation and page verification
+## Step 1 - Navigation and page verification
 
 The first step we will use contains the step to tell Flood Chrome to visit the initial target URL and to do some page verification to ensure we have successfully landed on the correct page and the page contents is returned as expected.
 
@@ -85,7 +87,7 @@ It serves two important purposes for load testing:
 a. If the verification passes - we were able to load the page and verify it was the correct page with teh correct time.
 b. If th everification fails - the page may be showing an error to the user in circumstances where the server may be overloaded with too much traffic - a common occurrence when executing load tests.
 
-# Step 2 - Navigation using HTML Text Links
+## Step 2 - Navigation using HTML Text Links
 
 The second step enables us to interact with a page object on the front page naviagted to in Step 1 - that will lead us to the next step in the business process.  
 
@@ -119,7 +121,7 @@ Using the Developer Tools feature in Google Chrome we are able to view the exact
 
 As you can see the link is fairly ugly as it contains a carriage return and a number of spaces on either side of the 'Hoodies' text so definitely a good example of the need to use the partialLinkText function!
 
-# Step 3 - Using XPATH
+## Step 3 - Using XPATH
 
 XPATH notation is a popular way of identifying objects that you would like to interact with. Flood Chrome fully supports XPATH definitions which can be very helpful and an alternate way of object interaction.
 
@@ -172,7 +174,7 @@ So we just use another 'browser.visit' step to go to the actual Cart page and ve
 
 We also have the ability to take a Screenshot of this page so we can verify later that we successfully went to the correct page, and the correct item was placed in the cart - exactly how the user will see it.
 
-# Step 4 - Using CSS Selectors
+## Step 4 - Using CSS Selectors
 
 Using CSS selectors is another way of identifying objects that we would like to interact with. In this step we would like to proceed to the checkout page with the item we selected in Step 3 in our shopping cart.
 
@@ -205,7 +207,7 @@ This will copy the exact CSS selector path that can be used in your step as foll
 
 In this case our Selector produced: '#post-14 > div > div > div > div > div > a' which is what can be used in the By.css step above.
 
-# Step 5 - Text entry & form field input
+## Step 5 - Text entry & form field input
 
 Filling out a form with a number of text entry fields can be very easily achieved with Flood Chrome. All we need to do is to find out the CSS or unique input ID of the field we would like to enter text into and include it in a step as follows:
 
@@ -226,7 +228,7 @@ Filling out a form with a number of text entry fields can be very easily achieve
 
 As you can see, a simple line of code per field containing the text string needing to be entered is all that is required to fill out a form.
 
-# Step 6 - Placing the order
+## Step 6 - Placing the order
 
 We have now almost completed the full item purchase business process. All that is left is to click the place order button using the following step:
 
@@ -248,7 +250,7 @@ When an object has a unique id - it makes our scripting very easy to describe th
 
 This step is almost identicial to the one in Step 4 except the usage of the id in this case. We are still clicking on the button with the LEFT mouse button and then verifying the order has gone through by verifying the expected text 'Thank you. Your order has been received'
 
-# Conclusion
+## Conclusion
 
 So we have completed scripting a full end to end purchase of an item in a typical online store using a number of different methods with Flood Chrome. This is quite a comprehensive and complex task using a protocol level user that is more common in popular load test tools such as Jmeter and Gatling.
 
