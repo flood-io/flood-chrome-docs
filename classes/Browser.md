@@ -1,6 +1,14 @@
 # Browser
-Driver (also called Browser) is the main entry point in each [step],
-it's your direct connection to the browser running the test.
+```typescript
+import { step } from "@flood/chrome"
+export default () => {
+  step("Start", async browser => {
+    await browser.visit("https://challenge.flood.io")
+  })
+}
+```
+
+
 #### Browser.blur(locator)
 * `locator` <`Locatable`> 
 * `returns:` <[Promise]> 
