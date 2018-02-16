@@ -5,7 +5,7 @@ it's your direct connection to the browser running the test.
 * `locator` <`Locatable`> 
 * `returns:` <[Promise]> 
 
-
+Removes focus from the specified DOM element.
 
 #### Driver.clear(locatable)
 * `locatable` <`Locatable`> 
@@ -28,8 +28,17 @@ Clear browser cookies.
 * `options` <`ClickOptions`> 
 * `returns:` <[Promise]> 
 
-Sends a click event to the element located at `selector`. If the element is
-currently outside the viewport it will first scroll to that element.
+**Example:**
+
+```typescript
+step("Start", async browser => {
+  await browser.click(By.partialLinkText('Start'))
+})
+```
+
+In this example we're constructing a <[Locatable]> using the `By.partialLinkText()` Locator, which will match the first `<a>` tag which contains the text "Start".
+
+
 
 #### Driver.doubleClick(locatable, options)
 * `locatable` <`Locatable`> 
@@ -56,16 +65,16 @@ Uses the provided locator to find the first element it matches, returning an Ele
 Uses the provided locator to find all elements matching the locator condition, returning an array of ElementHandles
 
 #### Driver.focus(locator)
-* `locator` <`Locatable`> 
+* `locator` <`Locatable`> The <[Locator]> to use to find an element to send focus to.
 * `returns:` <[Promise]> 
 
-
+Makes the element located by the first argument the receiver of future input.
 
 #### Driver.press(keyCode, options)
 * `keyCode` <[string]> 
 * `returns:` <[Promise]> 
 
-
+Presses a key on the keyboard specified by key code. For example, <[Key.ALT]>
 
 #### Driver.selectByIndex(locatable, index)
 * `locatable` <`Locatable`> 
@@ -96,32 +105,52 @@ Set Browser to send a custom User Agent (UA) string
 #### Driver.switchTo()
 * `returns:` <`TargetLocator`> 
 
-Switch the focus of the browser to another frame or window
+Switch the focus of the browser to another frame, tab, or window.
 
 #### Driver.takeScreenshot(options)
 * `options` <`ScreenshotOptions`> 
 * `returns:` <[Promise]> 
 
-Takes a screenshot of the whole page and saves it to the results folder with a random sequential name.
+Takes a screenshot of the whole page and saves it to the `flood/results` folder with a random sequential name. You can download the archive of your test results at the end of the test to retrieve these screenshots.
 
 #### Driver.type(locatable, text, options)
 * `locatable` <`Locatable`> 
 * `text` <[string]> 
 * `returns:` <[Promise]> 
 
-Types a string into an `<input>` control, key press by key press.
+**Example:**
+```typescript
+step("Step 1", async browser => {
+  await browser.type(By.css("#email"), "user@example.com")
+})
+```
+
+
 
 #### Driver.visit(url, options)
 * `url` <[string]> 
 * `options` <`NavigationOptions`> 
 * `returns:` <[Promise]> 
 
-Instructs the browser to navigate to a specific page. This is typically used as the
-entrypoint to your test, as the first instruction it is also responsible for creating
-a new Browser tab for this page to load into.
+**Example:**
+
+```typescript
+step("Start", async browser => {
+  await browser.visit("https://example.com")
+})
+```
+
 
 #### Driver.wait(timeoutOrCondition)
 * `returns:` <[Promise]> 
+
+**Example:**
+
+```typescript
+step("Start", async browser => {
+  await browser.wait(Until.elementIsVisible(By.css('h1.title')))
+})
+```
 
 You can use either a numeric value in seconds to wait for a specific time,
 or a {@linkcode Condition}, for more flexible conditions.

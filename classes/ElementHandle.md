@@ -1,5 +1,6 @@
 # ElementHandle
-null
+All methids on this class are asynchronous and must be used with `await` to wait for the result to fulfill from the browser.
+
 #### ElementHandle.blur()
 * `returns:` <[Promise]> 
 
@@ -43,32 +44,32 @@ Fetches the value of an attribute on this element
 #### ElementHandle.getId()
 * `returns:` <[Promise]> 
 
-
+Fetches the remote elements `id` attribute.
 
 #### ElementHandle.isDisplayed()
 * `returns:` <[Promise]> 
 
-
+Checks whether the remote element is displayed in the DOM and is visible to the user without being hidden by CSS or occluded by another element.
 
 #### ElementHandle.isEnabled()
 * `returns:` <[Promise]> 
 
-
+Checks whether the remote element is enabled. Typically this means it does not have a `disabled` property or attribute applied.
 
 #### ElementHandle.isSelectable()
 * `returns:` <[Promise]> 
 
-
+Checks whether the remote element is selectable. An element is selectable if it is an `<option>` or `input[type="checkbox"]` or radio button.
 
 #### ElementHandle.isSelected()
 * `returns:` <[Promise]> 
 
-
+If the remote element is selectable (such as an `<option>` or `input[type="checkbox"]`) this methos will indicate whether it is selected.
 
 #### ElementHandle.location()
 * `returns:` <[Promise]> 
 
-
+Fetches the remote elements physical location as `x` and `y`.
 
 #### ElementHandle.sendKeys(keys)
 * `returns:` <[Promise]> 
@@ -78,12 +79,12 @@ Fetches the value of an attribute on this element
 #### ElementHandle.size()
 * `returns:` <[Promise]> 
 
-
+Fetches the remote elements physical dimensions as `width` and `height`.
 
 #### ElementHandle.tagName()
 * `returns:` <[Promise]> 
 
-
+Fetches the remote elements `tagName` property.
 
 #### ElementHandle.takeScreenshot(options)
 * `options` <`ScreenshotOptions`> 

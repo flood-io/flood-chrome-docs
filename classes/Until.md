@@ -1,5 +1,6 @@
 # Until
-null
+You would typically use these to control the flow of you test.
+
 #### Until.ableToSwitchToFrame()
 * `returns:` <[Condition]> 
 

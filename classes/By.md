@@ -40,7 +40,11 @@ Locates a link containing the specified text.
 
 * `returns:` <`Locator`> 
 
-Locates a link (<a>) containing some of the specified text
+**Example:**
+```typescript
+await browser.findElement(By.partialLinkText("Checkout"))
+```
+
 
 #### By.partialVisibleText(text)
 * `text` <[string]> The substring to check for in a elements's visible text.
@@ -55,7 +59,8 @@ substring and is not hidden by CSS.
 
 * `returns:` <`Locator`> 
 
-Locates all elements whose `textContent` equals the given substring and is not hidden by CSS.
+This selector works in multiple stages, by first finding the element matching the text predicate, and then testing whether it is visible ion the viewport and is not occluded by another element or style property.
+
 
 #### By.xpath(path)
 * `path` <[string]> XPath selector

@@ -3,7 +3,15 @@
 
 * `returns:` <[void]> 
 
-Example: setup({ waitTimeout: 60 })
+_This is a secondary syntax to `export const settings = {}` which functions exactly the same way.
+
+**Example:**
+
+```typescript
+export default () => {
+ setup({ waitTimeout: 60 })
+}
+```
 
 
 
@@ -13,7 +21,20 @@ Example: setup({ waitTimeout: 60 })
 
 * `returns:` <[void]> 
 
-Declares each step in your test. This must go within the callback from `test()`.
+**Example:**
+
+```typescript
+export default () => {
+  step("Step 1", async browser => {
+    await browser.visit("https://example.com")
+  })
+
+  step("Step 2", async browser => {})
+
+  step("Step 3", async browser => {})
+}
+```
+
 
 #### step(name, options, fn)
 * `name` <[string]> 
