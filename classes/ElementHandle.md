@@ -104,10 +104,10 @@ Retrieves the text content of this element excluding leading and trailing whites
 
 
 
-[By]: classes/By.md
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
-[Condition]: classes/Condition.md
-[Driver]: classes/Driver.md
+[Browser]: classes/Browser.md
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [Device]: Enumerations.md/#device
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+[By]: classes/By.md
+[Condition]: classes/Condition.md
 [ElementHandle]: classes/ElementHandle.md

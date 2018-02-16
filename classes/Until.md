@@ -143,12 +143,12 @@ Creates a condition which waits until the page URL exactly matches the expected 
 Creates a condition which waits until the page URL matches the supplied `RegExp`.
 
 
-[By]: classes/By.md
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
-[Condition]: classes/Condition.md
-[Driver]: classes/Driver.md
+[Browser]: classes/Browser.md
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [Device]: Enumerations.md/#device
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+[By]: classes/By.md
+[Condition]: classes/Condition.md
 [ElementHandle]: classes/ElementHandle.md
 [Locator]: classes/Locator.md
 [TargetLocator]: classes/TargetLocator.md

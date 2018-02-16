@@ -2,6 +2,28 @@
 
 [Quick Start]#/README.md
 
+ * Browser
+  * [Browser.blur(locator)](classes/Browser.md#browserblurlocator)
+  * [Browser.clear(locatable)](classes/Browser.md#browserclearlocatable)
+  * [Browser.clearBrowserCache()](classes/Browser.md#browserclearbrowsercache)
+  * [Browser.clearBrowserCookies()](classes/Browser.md#browserclearbrowsercookies)
+  * [Browser.click(locatable, options)](classes/Browser.md#browserclicklocatable-options)
+  * [Browser.doubleClick(locatable, options)](classes/Browser.md#browserdoubleclicklocatable-options)
+  * [Browser.emulateDevice(deviceName)](classes/Browser.md#browseremulatedevicedevicename)
+  * [Browser.findElement(locator)](classes/Browser.md#browserfindelementlocator)
+  * [Browser.findElements(locator)](classes/Browser.md#browserfindelementslocator)
+  * [Browser.focus(locator)](classes/Browser.md#browserfocuslocator)
+  * [Browser.press(keyCode, options)](classes/Browser.md#browserpresskeycode-options)
+  * [Browser.selectByIndex(locatable, index)](classes/Browser.md#browserselectbyindexlocatable-index)
+  * [Browser.selectByText(locatable, text)](classes/Browser.md#browserselectbytextlocatable-text)
+  * [Browser.selectByValue(locatable, values)](classes/Browser.md#browserselectbyvaluelocatable-values)
+  * [Browser.setUserAgent(userAgent)](classes/Browser.md#browsersetuseragentuseragent)
+  * [Browser.switchTo()](classes/Browser.md#browserswitchto)
+  * [Browser.takeScreenshot(options)](classes/Browser.md#browsertakescreenshotoptions)
+  * [Browser.type(locatable, text, options)](classes/Browser.md#browsertypelocatable-text-options)
+  * [Browser.visit(url, options)](classes/Browser.md#browservisiturl-options)
+  * [Browser.wait(timeoutOrCondition)](classes/Browser.md#browserwaittimeoutorcondition)
+
  * By
   * [By.attr(tagName, attrName, attrValue)](classes/By.md#byattrtagname-attrname-attrvalue)
   * [By.css(selector)](classes/By.md#bycssselector)
@@ -14,28 +36,6 @@
   * [By.xpath(path)](classes/By.md#byxpathpath)
 
  * Condition
-
- * Driver
-  * [Driver.blur(locator)](classes/Driver.md#driverblurlocator)
-  * [Driver.clear(locatable)](classes/Driver.md#driverclearlocatable)
-  * [Driver.clearBrowserCache()](classes/Driver.md#driverclearbrowsercache)
-  * [Driver.clearBrowserCookies()](classes/Driver.md#driverclearbrowsercookies)
-  * [Driver.click(locatable, options)](classes/Driver.md#driverclicklocatable-options)
-  * [Driver.doubleClick(locatable, options)](classes/Driver.md#driverdoubleclicklocatable-options)
-  * [Driver.emulateDevice(deviceName)](classes/Driver.md#driveremulatedevicedevicename)
-  * [Driver.findElement(locator)](classes/Driver.md#driverfindelementlocator)
-  * [Driver.findElements(locator)](classes/Driver.md#driverfindelementslocator)
-  * [Driver.focus(locator)](classes/Driver.md#driverfocuslocator)
-  * [Driver.press(keyCode, options)](classes/Driver.md#driverpresskeycode-options)
-  * [Driver.selectByIndex(locatable, index)](classes/Driver.md#driverselectbyindexlocatable-index)
-  * [Driver.selectByText(locatable, text)](classes/Driver.md#driverselectbytextlocatable-text)
-  * [Driver.selectByValue(locatable, values)](classes/Driver.md#driverselectbyvaluelocatable-values)
-  * [Driver.setUserAgent(userAgent)](classes/Driver.md#driversetuseragentuseragent)
-  * [Driver.switchTo()](classes/Driver.md#driverswitchto)
-  * [Driver.takeScreenshot(options)](classes/Driver.md#drivertakescreenshotoptions)
-  * [Driver.type(locatable, text, options)](classes/Driver.md#drivertypelocatable-text-options)
-  * [Driver.visit(url, options)](classes/Driver.md#drivervisiturl-options)
-  * [Driver.wait(timeoutOrCondition)](classes/Driver.md#driverwaittimeoutorcondition)
 
  * ElementHandle
   * [ElementHandle.blur()](classes/ElementHandle.md#elementhandleblur)

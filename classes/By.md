@@ -70,5 +70,8 @@ This selector works in multiple stages, by first finding the element matching th
 Locates an element using an XPath expression
 
 
-[By]: classes/By.md
+[Browser]: classes/Browser.md
+[Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[Device]: Enumerations.md/#device
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+[By]: classes/By.md
