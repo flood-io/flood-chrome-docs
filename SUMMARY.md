@@ -3,7 +3,7 @@
 [Quick Start]#/README.md
 
  * By
-  * [By.attr(tagName, attrName, attrValue)](classes/By.md#byattrtagname-attrnameattrvalue)
+  * [By.attr(tagName, attrName, attrValue)](classes/By.md#byattrtagname-attrname-attrvalue)
   * [By.css(selector)](classes/By.md#bycssselector)
   * [By.id(id)](classes/By.md#byidid)
   * [By.js(func)](classes/By.md#byjsfunc)
@@ -33,7 +33,7 @@
   * [Driver.setUserAgent(userAgent)](classes/Driver.md#driversetuseragentuseragent)
   * [Driver.switchTo()](classes/Driver.md#driverswitchto)
   * [Driver.takeScreenshot(options)](classes/Driver.md#drivertakescreenshotoptions)
-  * [Driver.type(locatable, text, options)](classes/Driver.md#drivertypelocatable-textoptions)
+  * [Driver.type(locatable, text, options)](classes/Driver.md#drivertypelocatable-text-options)
   * [Driver.visit(url, options)](classes/Driver.md#drivervisiturl-options)
   * [Driver.wait(timeoutOrCondition)](classes/Driver.md#driverwaittimeoutorcondition)
 
