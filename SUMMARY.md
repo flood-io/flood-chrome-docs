@@ -4,7 +4,7 @@
 
 * [Quick Start](README.md)
 
-### By
+## By
 
 * [By.attr\(tagName, attrName, attrValue\)](classes/By.md#byattrtagname-attrnameattrvalue)
 * [By.css\(selector\)](classes/By.md#bycssselector)
