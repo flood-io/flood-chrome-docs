@@ -40,7 +40,14 @@ Creates a condition that will wait for the given element to be in the DOM, yet n
 * `locatable` <`Locatable`> 
 * `returns:` <`Condition`> 
 
-Creates a condition that will wait for the given element to become visible.
+Example:
+```ts
+step("Step 1", async browser => {
+	 await browser.click(By.css('.hide-panel'))
+  await browser.wait(Until.elementIsNotVisible(By.id("btn")))
+})
+```
+
 
 #### Until.elementIsSelected(locatable)
 * `locatable` <`Locatable`> 
@@ -54,7 +61,9 @@ Creates a condition that will wait for the given element to be deselected.
 
 Example:
 ```ts
-await browser.wait(Until.elementIsVisible(By.partialLinkText("Start")))
+step("Step 1", async browser => {
+  await browser.wait(Until.elementIsVisible(By.partialLinkText("Start")))
+})
 ```
 
 
