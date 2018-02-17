@@ -112,5 +112,5 @@ Example Handle represents a remote element in the DOM of the browser. It impleme
 All methids on this class are asynchronous and must be used with `await` to wait for the result to fulfill from the browser.
 
 
-[ClickOptions]: api/Interfaces.md
-[ScreenshotOptions]: api/Interfaces.md
+[ClickOptions]: ../Interfaces.md
+[ScreenshotOptions]: ../Interfaces.md

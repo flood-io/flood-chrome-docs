@@ -48,7 +48,7 @@ If no path is provided, the image won't be saved to the disk.
 Defines the screenshot options.
 
 
-[BoundingBox]: api/Interfaces.md
+[BoundingBox]: 
 -------
 # `StepOptions`
 
@@ -75,7 +75,7 @@ step("Step 1", { waitTimeout: 300 }, async browser => {
 ```
 
 
-[step]: api/Functions.md
+[step]: ../Functions.md
 -------
 # `TestSettings`
 
