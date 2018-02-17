@@ -18,7 +18,7 @@ We'll show you how you can achieve creating a full user item purchase scenario q
 
 ## Download the entire script
 
-Please find the script used in this detailed scenario here: ![link](https://gist.github.com/jrizio/630d8914e4c25bac4c8cea7cc3541b31/archive/1d518e4a5874e542d386eef70751b4faaa959298.zip)
+Please find the script used in this detailed scenario here: [link](https://gist.github.com/jrizio/630d8914e4c25bac4c8cea7cc3541b31/archive/1d518e4a5874e542d386eef70751b4faaa959298.zip)
 
 ## Overview of script configuation settings
 
