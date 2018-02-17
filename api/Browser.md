@@ -1,5 +1,5 @@
 -------
-# Browser
+# `Browser`
 
 Browser (also called Driver) is the main entry point in each <[step]>, it's your direct connection to the browser running the test.
 
@@ -13,29 +13,29 @@ export default () => {
 ```
 
 
-#### Browser.blur(locator)
+#### `Browser.blur(locator)`
 * `locator` <[Locatable]>  
 * returns: <Promise<void>> 
 
 Removes focus from the specified DOM element.
 
-#### Browser.clear(locatable)
+#### `Browser.clear(locatable)`
 * `locatable` <[Locatable]>  
 * returns: <Promise<void>> 
 
 Clears the selected value of an input or select control.
 
-#### Browser.clearBrowserCache()
+#### `Browser.clearBrowserCache()`
 * returns: <Promise<any>> 
 
 Clear browser cache.
 
-#### Browser.clearBrowserCookies()
+#### `Browser.clearBrowserCookies()`
 * returns: <Promise<any>> 
 
 Clear browser cookies.
 
-#### Browser.click(locatable[, options])
+#### `Browser.click(locatable[, options])`
 * `locatable` <[Locatable]>  
 * `options` <[ClickOptions]> (Optional) 
 * returns: <Promise<void>> 
@@ -54,7 +54,7 @@ step("Start", async browser => {
 In this example we're constructing a <[Locatable]> using the `By.partialLinkText()` Locator, which will match the first `<a>` tag which contains the text "Start".
 
 
-#### Browser.doubleClick(locatable[, options])
+#### `Browser.doubleClick(locatable[, options])`
 * `locatable` <[Locatable]>  
 * `options` <[ClickOptions]> (Optional) 
 * returns: <Promise<void>> 
@@ -62,76 +62,76 @@ In this example we're constructing a <[Locatable]> using the `By.partialLinkText
 Sends a double-click event to the element located by the supplied Locator or `selector`. If the element is
 currently outside the viewport it will first scroll to that element.
 
-#### Browser.emulateDevice(deviceName)
+#### `Browser.emulateDevice(deviceName)`
 * `deviceName` <[Device]>  
 * returns: <Promise<void>> 
 
 Configure Browser to emulate a given device
 
-#### Browser.findElement(locator)
+#### `Browser.findElement(locator)`
 * `locator` <string|[Locator]>  
 * returns: <Promise<[ElementHandle]|null>> 
 
 Uses the provided locator to find the first element it matches, returning an ElementHandle.
 
-#### Browser.findElements(locator)
+#### `Browser.findElements(locator)`
 * `locator` <string|[Locator]>  
 * returns: <Promise<[ElementHandle][]>> 
 
 Uses the provided locator to find all elements matching the locator condition, returning an array of ElementHandles
 
-#### Browser.focus(locator)
+#### `Browser.focus(locator)`
 * `locator` <[Locatable]>  The <[Locator]> to use to find an element to send focus to.
 * returns: <Promise<void>> 
 
 Makes the element located by the first argument the receiver of future input.
 
-#### Browser.press(keyCode[, options])
+#### `Browser.press(keyCode[, options])`
 * `keyCode` <string>  
 * `options` <undefined> (Optional) 
 * returns: <Promise<void>> 
 
 Presses a key on the keyboard specified by key code. For example, <[Key.ALT]>
 
-#### Browser.selectByIndex(locatable, index)
+#### `Browser.selectByIndex(locatable, index)`
 * `locatable` <[Locatable]>  
 * `index` <string>  
 * returns: <Promise<string[]>> 
 
 Selects an option within a `<select>` tag by its index in the list.
 
-#### Browser.selectByText(locatable, text)
+#### `Browser.selectByText(locatable, text)`
 * `locatable` <[Locatable]>  
 * `text` <string>  
 * returns: <Promise<string[]>> 
 
 Selects an option within a `<select>` tag by matching its visible text.
 
-#### Browser.selectByValue(locatable, values)
+#### `Browser.selectByValue(locatable, values)`
 * `locatable` <[Locatable]>  
 * `values` <string[]>  
 * returns: <Promise<string[]>> 
 
 Selects an option within a `<select>` tag using the value of the `<option>` element.
 
-#### Browser.setUserAgent(userAgent)
+#### `Browser.setUserAgent(userAgent)`
 * `userAgent` <string>  
 * returns: <Promise<void>> 
 
 Set Browser to send a custom User Agent (UA) string
 
-#### Browser.switchTo()
+#### `Browser.switchTo()`
 * returns: <[TargetLocator]> 
 
 Switch the focus of the browser to another frame, tab, or window.
 
-#### Browser.takeScreenshot([, options])
+#### `Browser.takeScreenshot([, options])`
 * `options` <[ScreenshotOptions]> (Optional) 
 * returns: <Promise<void>> 
 
 Takes a screenshot of the whole page and saves it to the `flood/results` folder with a random sequential name. You can download the archive of your test results at the end of the test to retrieve these screenshots.
 
-#### Browser.type(locatable, text[, options])
+#### `Browser.type(locatable, text[, options])`
 * `locatable` <[Locatable]>  
 * `text` <string>  
 * `options` <undefined> (Optional) 
@@ -147,7 +147,7 @@ step("Step 1", async browser => {
 ```
 
 
-#### Browser.visit(url[, options])
+#### `Browser.visit(url[, options])`
 * `url` <string>  
 * `options` <[NavigationOptions]> (Optional) 
 * returns: <Promise<void>> 
@@ -164,7 +164,7 @@ step("Start", async browser => {
 })
 ```
 
-#### Browser.wait(timeoutOrCondition)
+#### `Browser.wait(timeoutOrCondition)`
 * `timeoutOrCondition` <[Condition]|number>  
 * returns: <Promise<boolean>> 
 

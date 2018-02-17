@@ -1,5 +1,5 @@
 -------
-# BoundingBox
+# `BoundingBox`
 
 * `height` <number>  The height.
 * `width` <number>  The width.
@@ -8,7 +8,7 @@
 
 
 -------
-# ClickOptions
+# `ClickOptions`
 
 Specifies the available options to send when clicking to modify the click behaviour. For example, to send a double click, set `clickCount: 2`.
 
@@ -21,7 +21,7 @@ Specifies the available options to send when clicking to modify the click behavi
 
 
 -------
-# NavigationOptions
+# `NavigationOptions`
 
 This interface represents the available options to pass to <[Driver]>.visit()
 
@@ -32,7 +32,7 @@ This interface represents the available options to pass to <[Driver]>.visit()
 
 
 -------
-# ScreenshotOptions
+# `ScreenshotOptions`
 
 Defines the screenshot options.
 
@@ -50,7 +50,7 @@ Defines the screenshot options.
 
 [BoundingBox]: api/Interfaces.md
 -------
-# StepOptions
+# `StepOptions`
 
 Specifies the available options which can be supplied to a step to override global settings.
 
@@ -76,7 +76,7 @@ step("Step 1", { waitTimeout: 300 }, async browser => {
 
 
 -------
-# TestSettings
+# `TestSettings`
 
 This interface specifies the available options you can use to configure how your test runs. These properties should be exported using the property `settings`.
 

@@ -1,4 +1,4 @@
-#### setup(settings)
+#### `setup(settings)`
 * `settings` <[TestSettings]>  
 * returns: <void> 
 
@@ -16,7 +16,7 @@ export default () => {
 
 
 [TestSettings]: api/Interfaces.md
-#### step(name, fn)
+#### `step(name, fn)`
 * `name` <string>  Step Name
 * `fn` <[StepFunction]>  Actual implementation of step
 * returns: <void> 
@@ -37,7 +37,7 @@ export default () => {
 }
 ```
 
-#### step(name, options, fn)
+#### `step(name, options, fn)`
 * `name` <string>  
 * `options` <[StepOptions]>  
 * `fn` <[StepFunction]>  
