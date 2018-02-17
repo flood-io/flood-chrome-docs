@@ -195,6 +195,7 @@ export default () => {
 
 
 
+[step]: api/Functions.md
 [ClickOptions]: api/Interfaces.md
 [TargetLocator]: api/TargetLocator.md
 [ScreenshotOptions]: api/Interfaces.md

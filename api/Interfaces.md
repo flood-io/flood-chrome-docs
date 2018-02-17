@@ -75,6 +75,7 @@ step("Step 1", { waitTimeout: 300 }, async browser => {
 ```
 
 
+[step]: api/Functions.md
 -------
 # `TestSettings`
 
