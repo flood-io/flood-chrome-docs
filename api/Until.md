@@ -1,4 +1,3 @@
--------
 # `Until`
 
 Until is used to create wait <[Conditions]> which are used to wait for elements to become active, visible, invisible or disabled on the page.
@@ -152,11 +151,6 @@ Creates a condition which waits until the page URL exactly matches the expected 
 Creates a condition which waits until the page URL matches the supplied `RegExp`.
 
 
-Until is used to create wait <[Conditions]> which are used to wait for elements to become active, visible, invisible or disabled on the page.
-
-You would typically use these to control the flow of you test.
-
-
-[Condition]: Condition.md
-[Locatable]: Interfaces.md
-[Locator]: Locator.md
+[Condition]: api/Condition.md#condition
+[Locatable]: api/Interfaces.md#locatable
+[Locator]: api/Locator.md#locator

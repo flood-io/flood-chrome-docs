@@ -1,4 +1,3 @@
--------
 # `ElementHandle`
 
 Example Handle represents a remote element in the DOM of the browser. It implements useful methods for querying and interacting with this DOM element.
@@ -81,6 +80,8 @@ Fetches the remote elements physical location as `x` and `y`.
 * `keys` <string[]>  
 * returns: <[Promise]<void>> 
 
+Sends a series of key modifiers to the element.
+
 #### `elementHandle.size()`
 * returns: <[Promise]<{"width":"number","height":"number"}>> 
 
@@ -106,13 +107,10 @@ Retrieves the text content of this element excluding leading and trailing whites
 * `text` <string>  
 * returns: <[Promise]<void>> 
 
-
-Example Handle represents a remote element in the DOM of the browser. It implements useful methods for querying and interacting with this DOM element.
-
-All methids on this class are asynchronous and must be used with `await` to wait for the result to fulfill from the browser.
+Sends a series of key presses to the element to simulate a user typing on the keyboard. Use this to fill in input fields.
 
 
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[ClickOptions]: Interfaces.md
-[Locator]: Locator.md
-[ScreenshotOptions]: Interfaces.md
+[ClickOptions]: api/Interfaces.md#clickoptions
+[Locator]: api/Locator.md#locator
+[ScreenshotOptions]: api/Interfaces.md#screenshotoptions

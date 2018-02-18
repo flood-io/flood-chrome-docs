@@ -1,4 +1,3 @@
--------
 # `Device`
 
 Chrome DevTools Device Emulation
@@ -59,10 +58,6 @@ Chrome DevTools Device Emulation
 | `nokiaN9`                     | "Nokia N9"                      |         |
 | `nokiaN9Landscape`            | "Nokia N9 landscape"            |         |
 
-Chrome DevTools Device Emulation
-
-
--------
 # `Key`
 
 Lists all available keyboard control keys which can be used when sending a key press combination.
@@ -130,10 +125,6 @@ Lists all available keyboard control keys which can be used when sending a key p
 | `TAB`         |               |         |
 | `UP`          |               |         |
 
-Lists all available keyboard control keys which can be used when sending a key press combination.
-
-
--------
 # `MouseButtons`
 
 Specifies the available mouse buttons to use when clicking. The default is always `left`
@@ -144,10 +135,6 @@ Specifies the available mouse buttons to use when clicking. The default is alway
 | `MIDDLE` | "middle"      | Middle mouse button |
 | `RIGHT`  | "right"       |                     |
 
-Specifies the available mouse buttons to use when clicking. The default is always `left`
-
-
--------
 # `BoundingBox`
 
 * `height` <number>  The height.
@@ -155,8 +142,6 @@ Specifies the available mouse buttons to use when clicking. The default is alway
 * `x` <number>  The x-coordinate of top-left corner.
 * `y` <number>  The y-coordinate of top-left corner.
 
-
--------
 # `ClickOptions`
 
 Specifies the available options to send when clicking to modify the click behaviour. For example, to send a double click, set `clickCount: 2`.
@@ -166,11 +151,7 @@ Specifies the available options to send when clicking to modify the click behavi
 * `delay` <number> (Optional) Time to wait between mousedown and mouseup in milliseconds.
 Defaults to 0.
 
-Specifies the available options to send when clicking to modify the click behaviour. For example, to send a double click, set `clickCount: 2`.
-
-
-[MouseButtons]: Interfaces.md
--------
+[MouseButtons]: api/Interfaces.md#mousebuttons
 # `NavigationOptions`
 
 This interface represents the available options to pass to <[Driver]>.visit()
@@ -178,11 +159,7 @@ This interface represents the available options to pass to <[Driver]>.visit()
 * `timeout` <number> (Optional) Maximum navigation time in milliseconds, pass 0 to disable timeout.
 * `waitUntil` <load|domcontentloaded|networkidle0|networkidle2> (Optional) When to consider navigation succeeded.
 
-This interface represents the available options to pass to <[Driver]>.visit()
-
-
-[Driver]: Interfaces.md
--------
+[Driver]: api/Interfaces.md#driver
 # `ScreenshotOptions`
 
 Defines the screenshot options.
@@ -196,11 +173,7 @@ If no path is provided, the image won't be saved to the disk.
 * `quality` <number> (Optional) The quality of the image, between 0-100. Not applicable to png images.
 * `type` <jpeg|png> (Optional) The screenshot type.
 
-Defines the screenshot options.
-
-
-[BoundingBox]: Interfaces.md
--------
+[BoundingBox]: api/Interfaces.md#boundingbox
 # `StepOptions`
 
 Specifies the available options which can be supplied to a step to override global settings.
@@ -215,19 +188,7 @@ step("Step 1", { waitTimeout: 300 }, async browser => {
 
 * `waitTimeout` <number> (Optional) Timeout in seconds for all wait and navigation operations within this <[step]>.
 
-Specifies the available options which can be supplied to a step to override global settings.
-
-**Example:**
-
-```typescript
-step("Step 1", { waitTimeout: 300 }, async browser => {
-	await browser.click(...)
-})
-```
-
-
-[step]: Functions.md
--------
+[step]: api/Functions.md#step
 # `TestSettings`
 
 This interface specifies the available options you can use to configure how your test runs. These properties should be exported using the property `settings`.
@@ -261,18 +222,6 @@ Screenshots are saved to `/flood/result/screenshots` in the test archive.
 * `stepDelay` <number> (Optional) Specifies the time (in seconds) to wait after each step.
 * `userAgent` <string> (Optional) Specifies a custom User Agent (UA) string to send.
 * `waitTimeout` <number> (Optional) Global wait timeout applied to all wait tasks
-
-This interface specifies the available options you can use to configure how your test runs. These properties should be exported using the property `settings`.
-
-**Example:**
-
-```typescript
-export const settings = {
-  loopCount: Infinity,
-  clearCache: true
-}
-```
-
 
 # `Driver`
 

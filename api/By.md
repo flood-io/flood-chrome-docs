@@ -1,4 +1,3 @@
--------
 # `By`
 
 By is used to create <[Locator]>'s to find Elements or use in any place which accepts a Locator or <[Locatable]>.
@@ -68,7 +67,4 @@ This selector works in multiple stages, by first finding the element matching th
 Locates an element using an XPath expression
 
 
-By is used to create <[Locator]>'s to find Elements or use in any place which accepts a Locator or <[Locatable]>.
-
-
-[Locator]: Locator.md
+[Locator]: api/Locator.md#locator

@@ -1,3 +1,12 @@
+---
+title: Deep Dive Tutorial
+description: >-
+  This detailed example will show you how to actually build a working Flood
+  Chrome script that uses a variety of different classes to identify objects you
+  would like to interact with in order to successfully simulate a typical
+  business process.
+---
+
 # Detailed Tutorial - The Flood Merchandise Store
 
 ## Overview
@@ -49,15 +58,15 @@ export const settings: TestSettings = {
 
 This export block allows you to specify constants related to typical Test Settings used in all load tests:
 
-- loopCount: Used to specify how many iterations (or loops) you would like each user to run. If commented out or not included - the test will run forever.
+* loopCount: Used to specify how many iterations (or loops) you would like each user to run. If commented out or not included - the test will run forever.
 
-- device: This allows you to be able to simulate a user using a specific device in a specific mode of operation.
+* device: This allows you to be able to simulate a user using a specific device in a specific mode of operation.
 
-- disableCache: No caching is done if this is set to true.
+* disableCache: No caching is done if this is set to true.
 
-- actionDelay: the amount of time in seconds that the Flood Chrome replay engine will wait in between actions contained within a step.
+* actionDelay: the amount of time in seconds that the Flood Chrome replay engine will wait in between actions contained within a step.
 
-- stepDelay: the amount of time in seconds that the Flood Chrome replay engine will wait in between steps.
+* stepDelay: the amount of time in seconds that the Flood Chrome replay engine will wait in between steps.
 
 c. **export default() => { ... }**
 
@@ -70,12 +79,14 @@ The first step we will use contains the step to tell Flood Chrome to visit the i
 ![The Flood Store - Homepage](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-1-homepage.png)
 
 ```typescript
-	step('The Flood Store: Home', async (browser: Driver) => {
-		await browser.visit('https://jriz.io')
+step('The Flood Store: Home', async browser => {
+	await browser.visit('https://jriz.io')
 
-		let pageTextVerify = By.visibleText("Welcome to the Official Flood.io Apparel & Swag store.")
-		await browser.wait(Until.elementIsVisible(pageTextVerify))
-	})
+	let pageTextVerify = By.visibleText(
+		'Welcome to the Official Flood.io Apparel & Swag store.',
+	)
+	await browser.wait(Until.elementIsVisible(pageTextVerify))
+})
 ```
 
 Every step should be named appropriately to tell us what functionality is taking place (and how long does it take) within the step contents. So for this step we are timing how long the target URL takes to load from a user's perspective and also the verification that we are on the correct page.
@@ -89,7 +100,7 @@ b. If th everification fails - the page may be showing an error to the user in c
 
 ## Step 2 - Navigation using HTML Text Links
 
-The second step enables us to interact with a page object on the front page naviagted to in Step 1 - that will lead us to the next step in the business process.  
+The second step enables us to interact with a page object on the front page naviagted to in Step 1 - that will lead us to the next step in the business process.
 
 For this step we want to navigate to a particular clothing type - called a 'Hoodie'. To get to this clothing section we need to click on a text based link as shown below:
 
@@ -98,15 +109,13 @@ For this step we want to navigate to a particular clothing type - called a 'Hood
 This type of page interaction is very simple and powerful for normal text based links - we use the following step to achieve this as well as another page text verification to ensure we are on the expected page.
 
 ```typescript
-	step('The Flood Store: Click Hoodies', async (browser: Driver) => {
+step('The Flood Store: Click Hoodies', async browser => {
+	let lnkHoodies = await browser.findElement(By.partialLinkText('Hoodies'))
+	await lnkHoodies.click()
 
-		let lnkHoodies = await browser.findElement(By.partialLinkText("Hoodies"))
-		await lnkHoodies.click()
-
-		let pageTextVerify = By.visibleText("Hoodie with Logo")
-		await browser.wait(Until.elementIsVisible(pageTextVerify))
-
-	})
+	let pageTextVerify = By.visibleText('Hoodie with Logo')
+	await browser.wait(Until.elementIsVisible(pageTextVerify))
+})
 ```
 
 This step represents the actual click and subsequent page load of the user interaction of your end user clicking on the 'Hoodies' link and waiting for the next page to load.
@@ -126,12 +135,12 @@ As you can see the link is fairly ugly as it contains a carriage return and a nu
 XPATH notation is a popular way of identifying objects that you would like to interact with. Flood Chrome fully supports XPATH definitions which can be very helpful and an alternate way of object interaction.
 
 ```typescript
-	step('The Flood Store: Add To Cart', async (browser: Driver) => {
-
-		let addHoodieToCart = await browser.findElement(By.xpath("//a[@data-product_id=39]"))
-		await addHoodieToCart.click()
-
-	})
+step('The Flood Store: Add To Cart', async (browser: Driver) => {
+	let addHoodieToCart = await browser.findElement(
+		By.xpath('//a[@data-product_id=39]'),
+	)
+	await addHoodieToCart.click()
+})
 ```
 
 Once we have clicked on the 'Hoodies' link we are taken to the Hoodies sub-page which shows the user every single 'Hoodie' clothing type available to be purchased. Each product on a shopping site usually has a uniquely identifying code tied to it which we can use to select that item for completing our business process.
@@ -145,7 +154,7 @@ For the sake of this simple script - we know the hoodie we want to add to the ca
 So using the above step XPATH example we can use the following XPATH expression:
 
 ```typescript
-"//a[@data-product_id=39]"
+'//a[@data-product_id=39]'
 ```
 
 So we are able to narrow down from the entire page - what exact object we wish to interact with. We start by looking at the entire document object model (denoted by the //), all links on the page (denoted by the 'a' html tag), any links that have the data-product_id parameter, and lastly only the link that has the data-product_id parameter equal to the value 39.
@@ -155,19 +164,17 @@ Flood Chrome now knows exactly what object it needs to select.
 After FLood Chrome adds this item to the cart - we can navigate to the Cart page where we should see the item we just added listed.
 
 ```typescript
-	step('The Flood Store: View Cart', async (browser: Driver) => {
+step('The Flood Store: View Cart', async (browser: Driver) => {
+	await browser.visit('https://jriz.io/cart')
 
-		await browser.visit('https://jriz.io/cart')
+	let pageTextVerify1 = By.visibleText('Free shipping')
+	await browser.wait(Until.elementIsVisible(pageTextVerify1))
 
-		let pageTextVerify1 = By.visibleText("Free shipping")
-		await browser.wait(Until.elementIsVisible(pageTextVerify1))
+	let pageTextVerify2 = By.visibleText('Hoodie with Logo')
+	await browser.wait(Until.elementIsVisible(pageTextVerify2))
 
-		let pageTextVerify2 = By.visibleText("Hoodie with Logo")
-		await browser.wait(Until.elementIsVisible(pageTextVerify2))
-
-		await browser.takeScreenshot()
-
-	})
+	await browser.takeScreenshot()
+})
 ```
 
 So we just use another 'browser.visit' step to go to the actual Cart page and verify that firstly the page is present and that secondly the item 'Hoodie with Logo' is listed as an item.
@@ -184,25 +191,24 @@ a. Right Click on the Proceed to Checkout and click Inspect - this will bring up
 
 ![Proceed to Checkout - code](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-4-proceed-checkout-code.png)
 
-b. Click on the ellipsis link (...) and click Copy > Copy selector. 
+b. Click on the ellipsis link (...) and click Copy > Copy selector.
 
 ![Proceed to Checkout - copy selector](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-4-copy-selector.png)
 
 This will copy the exact CSS selector path that can be used in your step as follows:
 
-
 ```typescript
-	step('The Flood Store: Proceed to Checkout', async (browser: Driver) => {
+step('The Flood Store: Proceed to Checkout', async (browser: Driver) => {
+	let lnkProceedToCheckout = By.css(
+		'#post-14 > div > div > div > div > div > a',
+	)
+	await browser.wait(Until.elementIsVisible(lnkProceedToCheckout))
+	let element = await browser.findElement(lnkProceedToCheckout)
+	await element.click({ button: MouseButtons.LEFT })
 
-		let lnkProceedToCheckout = By.css('#post-14 > div > div > div > div > div > a')
-		await browser.wait(Until.elementIsVisible(lnkProceedToCheckout))
-		let element = await browser.findElement(lnkProceedToCheckout)
-		await element.click({ button: MouseButtons.LEFT })	
-
-		let pageTextVerify = By.visibleText("Returning customer?")
-		await browser.wait(Until.elementIsVisible(pageTextVerify))
-
-	})
+	let pageTextVerify = By.visibleText('Returning customer?')
+	await browser.wait(Until.elementIsVisible(pageTextVerify))
+})
 ```
 
 In this case our Selector produced: '#post-14 > div > div > div > div > div > a' which is what can be used in the By.css step above.
@@ -212,18 +218,16 @@ In this case our Selector produced: '#post-14 > div > div > div > div > div > a'
 Filling out a form with a number of text entry fields can be very easily achieved with Flood Chrome. All we need to do is to find out the CSS or unique input ID of the field we would like to enter text into and include it in a step as follows:
 
 ```typescript
-	step('The Flood Store: Checkout Data Entry', async (browser: Driver) => {
+step('The Flood Store: Checkout Data Entry', async (browser: Driver) => {
+	// Fill in text field - billing First Name
+	await browser.type(By.id('billing_first_name'), 'Jason')
 
-	   	// Fill in text field - billing First Name
-		await browser.type(By.id('billing_first_name'), "Jason")
+	// Fill in text field - billing First Name
+	await browser.type(By.id('billing_last_name'), 'Rizio')
 
-	   	// Fill in text field - billing First Name
-		await browser.type(By.id('billing_last_name'), "Rizio")
-
-	   	// Fill in text field - billing Company
-		await browser.type(By.id('billing_company'), "Flood IO")		
-
-	})
+	// Fill in text field - billing Company
+	await browser.type(By.id('billing_company'), 'Flood IO')
+})
 ```
 
 As you can see, a simple line of code per field containing the text string needing to be entered is all that is required to fill out a form.
@@ -233,17 +237,17 @@ As you can see, a simple line of code per field containing the text string needi
 We have now almost completed the full item purchase business process. All that is left is to click the place order button using the following step:
 
 ```typescript
-	step('The Flood Store: Place Order', async (browser: Driver) => {
+step('The Flood Store: Place Order', async (browser: Driver) => {
+	let btnPlaceOrder = By.id('place_order')
+	await browser.wait(Until.elementIsVisible(btnPlaceOrder))
+	let element = await browser.findElement(btnPlaceOrder)
+	await element.click({ button: MouseButtons.LEFT })
 
-		let btnPlaceOrder = By.id('place_order')
-		await browser.wait(Until.elementIsVisible(btnPlaceOrder))
-		let element = await browser.findElement(btnPlaceOrder)
-		await element.click({ button: MouseButtons.LEFT })	
-
-		let pageTextVerify = By.visibleText("Thank you. Your order has been received.")
-		await browser.wait(Until.elementIsVisible(pageTextVerify))
-
-	})	
+	let pageTextVerify = By.visibleText(
+		'Thank you. Your order has been received.',
+	)
+	await browser.wait(Until.elementIsVisible(pageTextVerify))
+})
 ```
 
 When an object has a unique id - it makes our scripting very easy to describe the object. Here the button has an id called 'place_order' which is all we need to use in order to interact with the object successfully.
@@ -255,6 +259,21 @@ This step is almost identicial to the one in Step 4 except the usage of the id i
 So we have completed scripting a full end to end purchase of an item in a typical online store using a number of different methods with Flood Chrome. This is quite a comprehensive and complex task using a protocol level user that is more common in popular load test tools such as Jmeter and Gatling.
 
 Usage of a Browser Level User such as Flood Chrome takes a lot of the complexity out of scripting these types of dynamic sites.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

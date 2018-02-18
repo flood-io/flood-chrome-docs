@@ -97,3 +97,4 @@ Over the years, countless customers have mentioned that getting started with Loa
 If you encounter any issues with the `@flood/chrome` project or Flood Chrome product, please [open an issue](https://github.com/flood-io/browser-test/issues) on the GitHub project.
 
 If you're encountering issues with Flood itself, please contact Flood Support from within the Flood Dashboard.
+
