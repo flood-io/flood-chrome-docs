@@ -1,7 +1,7 @@
 # Documentation
 
-[Quick Start](README.md)
-[Deep Dive Tutorial](examples/scenario_1_wordpress.md)
+* [Quick Start](README.md)
+* [Deep Dive Tutorial](examples/scenario_1_wordpress.md)
 
 # Flood Chrome API
   * [Device](api/Interfaces.md#device)
