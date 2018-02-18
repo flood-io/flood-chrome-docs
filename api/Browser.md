@@ -196,7 +196,9 @@ export default () => {
 
 
 [step]: Functions.md
+[Locatable]: Types.md
 [ClickOptions]: Interfaces.md
+[Device]: Enums.md
 [TargetLocator]: TargetLocator.md
 [ScreenshotOptions]: Interfaces.md
 [NavigationOptions]: Interfaces.md

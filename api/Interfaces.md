@@ -20,6 +20,7 @@ Defaults to 0.
 Specifies the available options to send when clicking to modify the click behaviour. For example, to send a double click, set `clickCount: 2`.
 
 
+[MouseButtons]: Enums.md
 -------
 # `NavigationOptions`
 
@@ -31,6 +32,7 @@ This interface represents the available options to pass to <[Driver]>.visit()
 This interface represents the available options to pass to <[Driver]>.visit()
 
 
+[Driver]: Types.md
 -------
 # `ScreenshotOptions`
 
