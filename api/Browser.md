@@ -179,7 +179,7 @@ step("Start", async browser => {
 ```
 
 You can use either a numeric value in seconds to wait for a specific time,
-or a {@linkcode Condition}, for more flexible conditions.
+or a <[Condition]>, for more flexible conditions.
 
 
 Browser (also called Driver) is the main entry point in each <[step]>, it's your direct connection to the browser running the test.
