@@ -1,8 +1,10 @@
-# Documentation
+## Documentation
 
 * [Quick Start](README.md)
 * [Deep Dive Tutorial](examples/scenario_1_wordpress.md)
-* Flood Chrome API
+
+## Flood Chrome API
+
   * [BoundingBox](api/Interfaces.md#boundingbox)
   * [Browser](api/Browser.md#browser)
   * [By](api/By.md#by)
