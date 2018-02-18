@@ -13,32 +13,32 @@ export default () => {
 ```
 
 
-#### `Browser.blur(locator)`
+#### `browser.blur(locator)`
 * `locator` <[Locatable]>  
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Removes focus from the specified DOM element.
 
-#### `Browser.clear(locatable)`
+#### `browser.clear(locatable)`
 * `locatable` <[Locatable]>  
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Clears the selected value of an input or select control.
 
-#### `Browser.clearBrowserCache()`
-* returns: <Promise<any>> 
+#### `browser.clearBrowserCache()`
+* returns: <[Promise]<any>> 
 
 Clear browser cache.
 
-#### `Browser.clearBrowserCookies()`
-* returns: <Promise<any>> 
+#### `browser.clearBrowserCookies()`
+* returns: <[Promise]<any>> 
 
 Clear browser cookies.
 
-#### `Browser.click(locatable[, options])`
+#### `browser.click(locatable[, options])`
 * `locatable` <[Locatable]>  
 * `options` <[ClickOptions]> (Optional) 
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Sends a click event to the element located at `selector`. If the element is
 currently outside the viewport it will first scroll to that element.
@@ -54,88 +54,88 @@ step("Start", async browser => {
 In this example we're constructing a <[Locatable]> using the `By.partialLinkText()` Locator, which will match the first `<a>` tag which contains the text "Start".
 
 
-#### `Browser.doubleClick(locatable[, options])`
+#### `browser.doubleClick(locatable[, options])`
 * `locatable` <[Locatable]>  
 * `options` <[ClickOptions]> (Optional) 
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Sends a double-click event to the element located by the supplied Locator or `selector`. If the element is
 currently outside the viewport it will first scroll to that element.
 
-#### `Browser.emulateDevice(deviceName)`
+#### `browser.emulateDevice(deviceName)`
 * `deviceName` <[Device]>  
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Configure Browser to emulate a given device
 
-#### `Browser.findElement(locator)`
+#### `browser.findElement(locator)`
 * `locator` <string|[Locator]>  
-* returns: <Promise<[ElementHandle]|null>> 
+* returns: <[Promise]<[ElementHandle]|null>> 
 
 Uses the provided locator to find the first element it matches, returning an ElementHandle.
 
-#### `Browser.findElements(locator)`
+#### `browser.findElements(locator)`
 * `locator` <string|[Locator]>  
-* returns: <Promise<[ElementHandle][]>> 
+* returns: <[Promise]<[ElementHandle][]>> 
 
 Uses the provided locator to find all elements matching the locator condition, returning an array of ElementHandles
 
-#### `Browser.focus(locator)`
+#### `browser.focus(locator)`
 * `locator` <[Locatable]>  The <[Locator]> to use to find an element to send focus to.
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Makes the element located by the first argument the receiver of future input.
 
-#### `Browser.press(keyCode[, options])`
+#### `browser.press(keyCode[, options])`
 * `keyCode` <string>  
 * `options` <undefined> (Optional) 
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Presses a key on the keyboard specified by key code. For example, <[Key.ALT]>
 
-#### `Browser.selectByIndex(locatable, index)`
+#### `browser.selectByIndex(locatable, index)`
 * `locatable` <[Locatable]>  
 * `index` <string>  
-* returns: <Promise<string[]>> 
+* returns: <[Promise]<string[]>> 
 
 Selects an option within a `<select>` tag by its index in the list.
 
-#### `Browser.selectByText(locatable, text)`
+#### `browser.selectByText(locatable, text)`
 * `locatable` <[Locatable]>  
 * `text` <string>  
-* returns: <Promise<string[]>> 
+* returns: <[Promise]<string[]>> 
 
 Selects an option within a `<select>` tag by matching its visible text.
 
-#### `Browser.selectByValue(locatable, values)`
+#### `browser.selectByValue(locatable, values)`
 * `locatable` <[Locatable]>  
 * `values` <string[]>  
-* returns: <Promise<string[]>> 
+* returns: <[Promise]<string[]>> 
 
 Selects an option within a `<select>` tag using the value of the `<option>` element.
 
-#### `Browser.setUserAgent(userAgent)`
+#### `browser.setUserAgent(userAgent)`
 * `userAgent` <string>  
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Set Browser to send a custom User Agent (UA) string
 
-#### `Browser.switchTo()`
+#### `browser.switchTo()`
 * returns: <[TargetLocator]> 
 
 Switch the focus of the browser to another frame, tab, or window.
 
-#### `Browser.takeScreenshot([, options])`
+#### `browser.takeScreenshot([, options])`
 * `options` <[ScreenshotOptions]> (Optional) 
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Takes a screenshot of the whole page and saves it to the `flood/results` folder with a random sequential name. You can download the archive of your test results at the end of the test to retrieve these screenshots.
 
-#### `Browser.type(locatable, text[, options])`
+#### `browser.type(locatable, text[, options])`
 * `locatable` <[Locatable]>  
 * `text` <string>  
 * `options` <undefined> (Optional) 
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Types a string into an `<input>` control, key press by key press. Use this to fill inputs as though it was typed by the user.
 
@@ -147,10 +147,10 @@ step("Step 1", async browser => {
 ```
 
 
-#### `Browser.visit(url[, options])`
+#### `browser.visit(url[, options])`
 * `url` <string>  
 * `options` <[NavigationOptions]> (Optional) 
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Instructs the browser to navigate to a specific page. This is typically used as the
 entrypoint to your test, as the first instruction it is also responsible for creating
@@ -164,9 +164,9 @@ step("Start", async browser => {
 })
 ```
 
-#### `Browser.wait(timeoutOrCondition)`
+#### `browser.wait(timeoutOrCondition)`
 * `timeoutOrCondition` <[Condition]|number>  
-* returns: <Promise<boolean>> 
+* returns: <[Promise]<boolean>> 
 
 Creates a waiter which will pause the test until a condition is met or a timeout is reached. This can be used for validation or control flow.
 
@@ -197,8 +197,11 @@ export default () => {
 
 [step]: Functions.md
 [Locatable]: Types.md
+[Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [ClickOptions]: Interfaces.md
 [Device]: Enums.md
+[Locator]: Locator.md
 [TargetLocator]: TargetLocator.md
 [ScreenshotOptions]: Interfaces.md
 [NavigationOptions]: Interfaces.md
+[Condition]: Condition.md

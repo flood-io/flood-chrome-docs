@@ -5,106 +5,106 @@ Example Handle represents a remote element in the DOM of the browser. It impleme
 
 All methids on this class are asynchronous and must be used with `await` to wait for the result to fulfill from the browser.
 
-#### `ElementHandle.blur()`
-* returns: <Promise<void>> 
+#### `elementhandle.blur()`
+* returns: <[Promise]<void>> 
 
 Clears focus from this element so that it will no longer receive keyboard inputs.
 
-#### `ElementHandle.clear()`
-* returns: <Promise<void>> 
+#### `elementhandle.clear()`
+* returns: <[Promise]<void>> 
 
 Schedules a command to clear the value of this element.
 This command has no effect if the underlying DOM element is neither a text
 INPUT, SELECT, or a TEXTAREA element.
 
-#### `ElementHandle.click([, options])`
+#### `elementhandle.click([, options])`
 * `options` <[ClickOptions]> (Optional) 
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Sends a click event to the element attached to this handle. If the element is
 currently outside the viewport it will first scroll to that element.
 
-#### `ElementHandle.findElement(locator)`
+#### `elementhandle.findElement(locator)`
 * `locator` <string|[Locator]>  
-* returns: <Promise<[ElementHandle]|null>> 
+* returns: <[Promise]<[ElementHandle]|null>> 
 
 Locates an element using the supplied {@linkcode Locator}, returning an {@linkcode ElementHandle}
 
-#### `ElementHandle.findElements(locator)`
+#### `elementhandle.findElements(locator)`
 * `locator` <[Locator]|string>  
-* returns: <Promise<[ElementHandle][]>> 
+* returns: <[Promise]<[ElementHandle][]>> 
 
 Locates all elements using the supplied {@linkcode Locator}, returning an array of {@linkcode ElementHandle}'s
 
-#### `ElementHandle.focus()`
-* returns: <Promise<void>> 
+#### `elementhandle.focus()`
+* returns: <[Promise]<void>> 
 
 Sends focus to this element so that it receives keyboard inputs.
 
-#### `ElementHandle.getAttribute(key)`
+#### `elementhandle.getAttribute(key)`
 * `key` <string>  
-* returns: <Promise<string|null>> 
+* returns: <[Promise]<string|null>> 
 
 Fetches the value of an attribute on this element
 
-#### `ElementHandle.getId()`
-* returns: <Promise<string|null>> 
+#### `elementhandle.getId()`
+* returns: <[Promise]<string|null>> 
 
 Fetches the remote elements `id` attribute.
 
-#### `ElementHandle.isDisplayed()`
-* returns: <Promise<boolean>> 
+#### `elementhandle.isDisplayed()`
+* returns: <[Promise]<boolean>> 
 
 Checks whether the remote element is displayed in the DOM and is visible to the user without being hidden by CSS or occluded by another element.
 
-#### `ElementHandle.isEnabled()`
-* returns: <Promise<boolean>> 
+#### `elementhandle.isEnabled()`
+* returns: <[Promise]<boolean>> 
 
 Checks whether the remote element is enabled. Typically this means it does not have a `disabled` property or attribute applied.
 
-#### `ElementHandle.isSelectable()`
-* returns: <Promise<boolean>> 
+#### `elementhandle.isSelectable()`
+* returns: <[Promise]<boolean>> 
 
 Checks whether the remote element is selectable. An element is selectable if it is an `<option>` or `input[type="checkbox"]` or radio button.
 
-#### `ElementHandle.isSelected()`
-* returns: <Promise<boolean>> 
+#### `elementhandle.isSelected()`
+* returns: <[Promise]<boolean>> 
 
 If the remote element is selectable (such as an `<option>` or `input[type="checkbox"]`) this methos will indicate whether it is selected.
 
-#### `ElementHandle.location()`
-* returns: <Promise<>> 
+#### `elementhandle.location()`
+* returns: <[Promise]<>> 
 
 Fetches the remote elements physical location as `x` and `y`.
 
-#### `ElementHandle.sendKeys(keys)`
+#### `elementhandle.sendKeys(keys)`
 * `keys` <string[]>  
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
-#### `ElementHandle.size()`
-* returns: <Promise<>> 
+#### `elementhandle.size()`
+* returns: <[Promise]<>> 
 
 Fetches the remote elements physical dimensions as `width` and `height`.
 
-#### `ElementHandle.tagName()`
-* returns: <Promise<string|null>> 
+#### `elementhandle.tagName()`
+* returns: <[Promise]<string|null>> 
 
 Fetches the remote elements `tagName` property.
 
-#### `ElementHandle.takeScreenshot([, options])`
+#### `elementhandle.takeScreenshot([, options])`
 * `options` <[ScreenshotOptions]> (Optional) 
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 Takes a screenshot of this element and saves it to the results folder with a random name.
 
-#### `ElementHandle.text()`
-* returns: <Promise<string>> 
+#### `elementhandle.text()`
+* returns: <[Promise]<string>> 
 
 Retrieves the text content of this element excluding leading and trailing whitespace.
 
-#### `ElementHandle.type(text)`
+#### `elementhandle.type(text)`
 * `text` <string>  
-* returns: <Promise<void>> 
+* returns: <[Promise]<void>> 
 
 
 Example Handle represents a remote element in the DOM of the browser. It implements useful methods for querying and interacting with this DOM element.
@@ -112,5 +112,7 @@ Example Handle represents a remote element in the DOM of the browser. It impleme
 All methids on this class are asynchronous and must be used with `await` to wait for the result to fulfill from the browser.
 
 
+[Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [ClickOptions]: Interfaces.md
+[Locator]: Locator.md
 [ScreenshotOptions]: Interfaces.md
