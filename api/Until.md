@@ -151,6 +151,6 @@ Creates a condition which waits until the page URL exactly matches the expected 
 Creates a condition which waits until the page URL matches the supplied `RegExp`.
 
 
-[Condition]: api/Condition.md#condition
-[Locatable]: api/Interfaces.md#locatable
-[Locator]: api/Locator.md#locator
+[Condition]: Condition.md#condition
+[Locatable]: Interfaces.md#locatable
+[Locator]: Locator.md#locator

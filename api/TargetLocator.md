@@ -28,4 +28,4 @@ ElementHandle: Switch to a frame using the supplied ElementHandle of a frame.
 
 
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[ElementHandle]: api/ElementHandle.md#elementhandle
+[ElementHandle]: ElementHandle.md#elementhandle

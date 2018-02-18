@@ -181,13 +181,13 @@ You can use either a numeric value in seconds to wait for a specific time,
 or a <[Condition]>, for more flexible conditions.
 
 
-[step]: api/Functions.md#step
-[Locatable]: api/Interfaces.md#locatable
+[step]: Functions.md#step
+[Locatable]: Interfaces.md#locatable
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[ClickOptions]: api/Interfaces.md#clickoptions
-[Device]: api/Interfaces.md#device
-[Locator]: api/Locator.md#locator
-[TargetLocator]: api/TargetLocator.md#targetlocator
-[ScreenshotOptions]: api/Interfaces.md#screenshotoptions
-[NavigationOptions]: api/Interfaces.md#navigationoptions
-[Condition]: api/Condition.md#condition
+[ClickOptions]: Interfaces.md#clickoptions
+[Device]: Interfaces.md#device
+[Locator]: Locator.md#locator
+[TargetLocator]: TargetLocator.md#targetlocator
+[ScreenshotOptions]: Interfaces.md#screenshotoptions
+[NavigationOptions]: Interfaces.md#navigationoptions
+[Condition]: Condition.md#condition

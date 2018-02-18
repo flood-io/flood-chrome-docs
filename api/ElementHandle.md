@@ -111,6 +111,6 @@ Sends a series of key presses to the element to simulate a user typing on the ke
 
 
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[ClickOptions]: api/Interfaces.md#clickoptions
-[Locator]: api/Locator.md#locator
-[ScreenshotOptions]: api/Interfaces.md#screenshotoptions
+[ClickOptions]: Interfaces.md#clickoptions
+[Locator]: Locator.md#locator
+[ScreenshotOptions]: Interfaces.md#screenshotoptions

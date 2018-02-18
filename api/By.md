@@ -67,4 +67,4 @@ This selector works in multiple stages, by first finding the element matching th
 Locates an element using an XPath expression
 
 
-[Locator]: api/Locator.md#locator
+[Locator]: Locator.md#locator

@@ -15,7 +15,7 @@ export default () => {
 ```
 
 
-[TestSettings]: api/Interfaces.md#testsettings
+[TestSettings]: Interfaces.md#testsettings
 #### `step(name, fn)`
 * `name` <string>  Step Name
 * `fn` <[StepFunction]>  Actual implementation of step
@@ -44,5 +44,5 @@ export default () => {
 * returns: <void> 
 
 
-[StepFunction]: api/Interfaces.md#stepfunction
-[StepOptions]: api/Interfaces.md#stepoptions
+[StepFunction]: Interfaces.md#stepfunction
+[StepOptions]: Interfaces.md#stepoptions

@@ -86,11 +86,8 @@ Over the years, countless customers have mentioned that getting started with Loa
 
 ## Documentation
 
-* [Getting Started Guide]()
-* [Writing Scripts]()
-* [Flood Challenge Tutorial]()
-* [Tooling Setup Guide]()
-* [API Documentation]()
+* [Deep dive tutorial](examples/scenario_1_wordpress.md)
+* [API Documentation](api/Browser.md)
 
 ## Reporting Issues
 

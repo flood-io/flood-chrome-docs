@@ -151,7 +151,7 @@ Specifies the available options to send when clicking to modify the click behavi
 * `delay` <number> (Optional) Time to wait between mousedown and mouseup in milliseconds.
 Defaults to 0.
 
-[MouseButtons]: api/Interfaces.md#mousebuttons
+[MouseButtons]: Interfaces.md#mousebuttons
 # `NavigationOptions`
 
 This interface represents the available options to pass to <[Driver]>.visit()
@@ -159,7 +159,7 @@ This interface represents the available options to pass to <[Driver]>.visit()
 * `timeout` <number> (Optional) Maximum navigation time in milliseconds, pass 0 to disable timeout.
 * `waitUntil` <load|domcontentloaded|networkidle0|networkidle2> (Optional) When to consider navigation succeeded.
 
-[Driver]: api/Interfaces.md#driver
+[Driver]: Interfaces.md#driver
 # `ScreenshotOptions`
 
 Defines the screenshot options.
@@ -173,7 +173,7 @@ If no path is provided, the image won't be saved to the disk.
 * `quality` <number> (Optional) The quality of the image, between 0-100. Not applicable to png images.
 * `type` <jpeg|png> (Optional) The screenshot type.
 
-[BoundingBox]: api/Interfaces.md#boundingbox
+[BoundingBox]: Interfaces.md#boundingbox
 # `StepOptions`
 
 Specifies the available options which can be supplied to a step to override global settings.
@@ -188,7 +188,7 @@ step("Step 1", { waitTimeout: 300 }, async browser => {
 
 * `waitTimeout` <number> (Optional) Timeout in seconds for all wait and navigation operations within this <[step]>.
 
-[step]: api/Functions.md#step
+[step]: Functions.md#step
 # `TestSettings`
 
 This interface specifies the available options you can use to configure how your test runs. These properties should be exported using the property `settings`.
