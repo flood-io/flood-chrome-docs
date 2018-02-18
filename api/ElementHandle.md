@@ -73,7 +73,7 @@ Checks whether the remote element is selectable. An element is selectable if it 
 If the remote element is selectable (such as an `<option>` or `input[type="checkbox"]`) this methos will indicate whether it is selected.
 
 #### `elementHandle.location()`
-* returns: <[Promise]<>> 
+* returns: <[Promise]<{"y":"number","x":"number"}>> 
 
 Fetches the remote elements physical location as `x` and `y`.
 
@@ -82,7 +82,7 @@ Fetches the remote elements physical location as `x` and `y`.
 * returns: <[Promise]<void>> 
 
 #### `elementHandle.size()`
-* returns: <[Promise]<>> 
+* returns: <[Promise]<{"width":"number","height":"number"}>> 
 
 Fetches the remote elements physical dimensions as `width` and `height`.
 

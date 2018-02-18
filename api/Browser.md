@@ -88,7 +88,7 @@ Makes the element located by the first argument the receiver of future input.
 
 #### `browser.press(keyCode[, options])`
 * `keyCode` <string>  
-* `options` <undefined> (Optional) 
+* `options` <{"text":"string","delay":"number"}> (Optional) 
 * returns: <[Promise]<void>> 
 
 Presses a key on the keyboard specified by key code. For example, <[Key.ALT]>
@@ -134,7 +134,7 @@ Takes a screenshot of the whole page and saves it to the `flood/results` folder 
 #### `browser.type(locatable, text[, options])`
 * `locatable` <[Locatable]>  
 * `text` <string>  
-* `options` <undefined> (Optional) 
+* `options` <{"delay":"number"}> (Optional) 
 * returns: <[Promise]<void>> 
 
 Types a string into an `<input>` control, key press by key press. Use this to fill inputs as though it was typed by the user.
