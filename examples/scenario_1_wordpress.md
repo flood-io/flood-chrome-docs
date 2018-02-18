@@ -1,10 +1,5 @@
 ---
 title: Deep Dive Tutorial
-description: >-
-  This detailed example will show you how to actually build a working Flood
-  Chrome script that uses a variety of different classes to identify objects you
-  would like to interact with in order to successfully simulate a typical
-  business process.
 ---
 
 # Detailed Tutorial - The Flood Merchandise Store
@@ -259,30 +254,4 @@ This step is almost identicial to the one in Step 4 except the usage of the id i
 So we have completed scripting a full end to end purchase of an item in a typical online store using a number of different methods with Flood Chrome. This is quite a comprehensive and complex task using a protocol level user that is more common in popular load test tools such as Jmeter and Gatling.
 
 Usage of a Browser Level User such as Flood Chrome takes a lot of the complexity out of scripting these types of dynamic sites.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
