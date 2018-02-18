@@ -255,3 +255,4 @@ So we have completed scripting a full end to end purchase of an item in a typica
 
 Usage of a Browser Level User such as Flood Chrome takes a lot of the complexity out of scripting these types of dynamic sites.
 
+
