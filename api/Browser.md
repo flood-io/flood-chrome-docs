@@ -196,10 +196,10 @@ export default () => {
 
 
 [step]: Functions.md
-[Locatable]: Types.md
+[Locatable]: Interfaces.md
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [ClickOptions]: Interfaces.md
-[Device]: Enums.md
+[Device]: Interfaces.md
 [Locator]: Locator.md
 [TargetLocator]: TargetLocator.md
 [ScreenshotOptions]: Interfaces.md

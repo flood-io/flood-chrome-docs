@@ -44,5 +44,5 @@ export default () => {
 * returns: <void> 
 
 
-[StepFunction]: Types.md
+[StepFunction]: Interfaces.md
 [StepOptions]: Interfaces.md

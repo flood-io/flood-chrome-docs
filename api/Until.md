@@ -158,5 +158,5 @@ You would typically use these to control the flow of you test.
 
 
 [Condition]: Condition.md
-[Locatable]: Types.md
+[Locatable]: Interfaces.md
 [Locator]: Locator.md
