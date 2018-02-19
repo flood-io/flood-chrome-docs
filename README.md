@@ -57,7 +57,7 @@ yarn install
 
 #### 3. Write and validate your script
 
-Edit `test.ts` in your editor of choice. To learn more about the scripting capabilities we've put together a detailed tutorial on [testing the "Flood Merchandice Store"](examples/scenario_1_wordpress.md).
+Edit `test.ts` in your editor of choice. To learn more about the scripting capabilities we've put together a detailed tutorial on [testing the "Flood Merchandise Store"](examples/scenario_1_wordpress.md).
 
 As you're writing your script, you can validate it by running it on the Flood validation service:
 
