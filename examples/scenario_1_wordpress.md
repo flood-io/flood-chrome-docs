@@ -90,12 +90,13 @@ The page text verification is purely just telling Flood Chrome to wait for a spe
 
 It serves two important purposes for load testing:
 
-a. If the verification passes - we were able to load the page and verify it was the correct page with teh correct time.
-b. If th everification fails - the page may be showing an error to the user in circumstances where the server may be overloaded with too much traffic - a common occurrence when executing load tests.
+a. If the verification passes - we were able to load the page and verify it was the correct page with the correct time.
+
+b. If the verification fails - the page may be showing an error to the user in circumstances where the server may be overloaded with too much traffic - a common occurrence when executing load tests.
 
 ## Step 2 - Navigation using HTML Text Links
 
-The second step enables us to interact with a page object on the front page naviagted to in Step 1 - that will lead us to the next step in the business process.
+The second step enables us to interact with a page object on the front page navigated to in Step 1. That will lead us to the next step in the business process.
 
 For this step we want to navigate to a particular clothing type - called a 'Hoodie'. To get to this clothing section we need to click on a text based link as shown below:
 
@@ -115,19 +116,19 @@ step('The Flood Store: Click Hoodies', async browser => {
 
 This step represents the actual click and subsequent page load of the user interaction of your end user clicking on the 'Hoodies' link and waiting for the next page to load.
 
-Here we have the unique step name (aka. the Transaction name) - but also a new fineElement function which is used by Flood Chrome to identify the object we need to interact with. Inside this function we can use a number of By.xxx sub functions that will allow us to be more specific in identifying the particular object we want.
+Here we have the unique step name (aka. the Transaction name) - but also a new findElement function which is used by Flood Chrome to identify the object we need to interact with. Inside this function we can use a number of By.xxx sub functions that will allow us to be more specific in identifying the particular object we want.
 
-For text links - we can use partialLinkText and also linkText. linkText needs to be the exact link string specified within the A HREF link tags. partialLinkText is self-explanatory in that it only needs a partial match of the link text to be able to identify the object.
+For text links, we can use partialLinkText and also linkText. linkText needs to be the exact link string specified within the A HREF link tags. partialLinkText only needs a partial match of the link text to be able to identify the object.
 
-Using the Developer Tools feature in Google Chrome we are able to view the exact text of a hyperlink - simply right-click (on Windows) or hold down the CTRL button while clicking on the link and then select Inspect. The Developer Tools sidebar will appear which will automatically highlight the link code for you, as follows:
+Using the Developer Tools feature in Google Chrome, we are able to view the exact text of a hyperlink. Simply right-click or hold down the CTRL button while clicking on the link and then select Inspect. The Developer Tools sidebar will appear which will automatically highlight the link code for you, as follows:
 
 ![Hoodies - Link Text](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-3-hoodies-link-code.png)
 
 As you can see the link is fairly ugly as it contains a carriage return and a number of spaces on either side of the 'Hoodies' text so definitely a good example of the need to use the partialLinkText function!
 
-## Step 3 - Using XPATH
+## Step 3 - Using XPath
 
-XPATH notation is a popular way of identifying objects that you would like to interact with. Flood Chrome fully supports XPATH definitions which can be very helpful and an alternate way of object interaction.
+XPath notation is a popular way of identifying objects that you would like to interact with. Flood Chrome fully supports XPath definitions which can be very helpful and an alternate way of object interaction.
 
 ```typescript
 step('The Flood Store: Add To Cart', async (browser: Driver) => {
@@ -138,25 +139,25 @@ step('The Flood Store: Add To Cart', async (browser: Driver) => {
 })
 ```
 
-Once we have clicked on the 'Hoodies' link we are taken to the Hoodies sub-page which shows the user every single 'Hoodie' clothing type available to be purchased. Each product on a shopping site usually has a uniquely identifying code tied to it which we can use to select that item for completing our business process.
+Once we have clicked on the 'Hoodies' link, we are taken to the Hoodies sub-page, which shows the user every single 'Hoodie' clothing type available to be purchased. Each product on a shopping site usually has a uniquely identifying code tied to it that we can use to select that item for completing our business process.
 
-For the sake of this simple script - we know the hoodie we want to add to the cart has a product ID of 39. We can see this again using the Developer Tools and highlighting the Add to Cart button of the item we'd like to add to our cart:
+For the sake of this simple script, we know the hoodie we want to add to the cart has a product ID of 39. We can see this again using the Developer Tools and highlighting the Add to Cart button of the item we'd like to add to our cart:
 
 ![Hoodies - Add To Cart button](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-3-hoodie-addtocart.png)
 
 ![Hoodies - Product ID code](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-3-hoodie-product-id.png)
 
-So using the above step XPATH example we can use the following XPATH expression:
+So using the above step XPath example we can use the following XPath expression:
 
 ```typescript
 '//a[@data-product_id=39]'
 ```
 
-So we are able to narrow down from the entire page - what exact object we wish to interact with. We start by looking at the entire document object model (denoted by the //), all links on the page (denoted by the 'a' html tag), any links that have the data-product_id parameter, and lastly only the link that has the data-product_id parameter equal to the value 39.
+So we are able to narrow down from the entire page what exact object we wish to interact with. We start by looking at the entire document object model (denoted by the //), all links on the page (denoted by the 'a' html tag), any links that have the data-product_id parameter, and lastly only the link that has the data-product_id parameter equal to the value 39.
 
 Flood Chrome now knows exactly what object it needs to select.
 
-After FLood Chrome adds this item to the cart - we can navigate to the Cart page where we should see the item we just added listed.
+After Flood Chrome adds this item to the cart, we can navigate to the Cart page where we should see the item we just added.
 
 ```typescript
 step('The Flood Store: View Cart', async (browser: Driver) => {
@@ -172,9 +173,9 @@ step('The Flood Store: View Cart', async (browser: Driver) => {
 })
 ```
 
-So we just use another 'browser.visit' step to go to the actual Cart page and verify that firstly the page is present and that secondly the item 'Hoodie with Logo' is listed as an item.
+So we just use another 'browser.visit' step to go to the actual Cart page and verify firstly that the page is present and secondly that the item 'Hoodie with Logo' is listed as an item.
 
-We also have the ability to take a Screenshot of this page so we can verify later that we successfully went to the correct page, and the correct item was placed in the cart - exactly how the user will see it.
+We also have the ability to take a screenshot of this page so we can verify later that we successfully went to the correct page and that the correct item was placed in the cart - exactly how the user will see it.
 
 ## Step 4 - Using CSS Selectors
 
@@ -182,7 +183,7 @@ Using CSS selectors is another way of identifying objects that we would like to 
 
 Again, we need to have a look at the properties of this button and we do this with the Developer Tools feature as well. The properties can be selected using the following steps:
 
-a. Right Click on the Proceed to Checkout and click Inspect - this will bring up the actual line of code of the button object:
+a. Right click on the Proceed to Checkout button and click Inspect. This will bring up the actual line of code of the button object:
 
 ![Proceed to Checkout - code](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-4-proceed-checkout-code.png)
 
@@ -245,13 +246,13 @@ step('The Flood Store: Place Order', async (browser: Driver) => {
 })
 ```
 
-When an object has a unique id - it makes our scripting very easy to describe the object. Here the button has an id called 'place_order' which is all we need to use in order to interact with the object successfully.
+When an object has a unique id, it makes our scripting very easy to describe the object. Here the button has an id called 'place_order' which is all we need to use in order to interact with the object successfully.
 
-This step is almost identicial to the one in Step 4 except the usage of the id in this case. We are still clicking on the button with the LEFT mouse button and then verifying the order has gone through by verifying the expected text 'Thank you. Your order has been received'
+This step is almost identicial to the one in Step 4 except the usage of the id in this case. We are still clicking on the button with the LEFT mouse button and then verifying the order has gone through by verifying the expected text 'Thank you. Your order has been received'.
 
 ## Conclusion
 
-So we have completed scripting a full end to end purchase of an item in a typical online store using a number of different methods with Flood Chrome. This is quite a comprehensive and complex task using a protocol level user that is more common in popular load test tools such as Jmeter and Gatling.
+So we have completed scripting a full end-to-end purchase of an item in a typical online store using a number of different methods with Flood Chrome. This is quite a comprehensive and complex task using a protocol level user that is more common in popular load test tools such as Jmeter and Gatling.
 
 Usage of a Browser Level User such as Flood Chrome takes a lot of the complexity out of scripting these types of dynamic sites.
 
