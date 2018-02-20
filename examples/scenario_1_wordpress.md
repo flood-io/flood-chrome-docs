@@ -8,7 +8,7 @@ title: Deep Dive Tutorial
 
 This detailed example will show you how to actually build a working Flood Chrome script that uses a variety of different classes to identify objects you would like to interact with in order to successfully simulate a typical business process.
 
-The example uses a site called 'The Flood Store' - a fictional online shopping store that sells Flood IO branded apparel and other clothing items. It is fairly representative of a typical online store that customer's may require to be load tested but is complex enough that using a traditional load test tool such as Jmeter or Gatling requires a lot of work in scripting against.
+The example uses a site called 'The Flood Store' - a fictional online shopping store that sells Flood IO-branded apparel and other clothing items. It is fairly representative of a typical online store that customers may require to be load tested but is complex enough that using a traditional load test tool such as Jmeter or Gatling requires a lot of work in scripting against.
 
 It is built using Wordpress and the Woocommerce plug-in.
 
@@ -78,7 +78,7 @@ step('The Flood Store: Home', async browser => {
 	await browser.visit('https://jriz.io')
 
 	let pageTextVerify = By.visibleText(
-		'Welcome to the Official Flood.io Apparel & Swag store.',
+		'Welcome to the Flood IO Merchandise Store',
 	)
 	await browser.wait(Until.elementIsVisible(pageTextVerify))
 })
