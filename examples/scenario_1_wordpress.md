@@ -31,33 +31,41 @@ Some initial script parameters need to be stated at the very start of the script
 a. **import { ... }**
 
 ```typescript
-import { step, TestSettings, Until, By, MouseButtons, Device, Driver } from '@flood/chrome'
+import { step, TestSettings, Until, By } from '@flood/chrome'
 import * as assert from 'assert'
 }
 ```
 
-The initial import statement allows you to add classes relating to steps, TestSetting, Mouse button interactions, and the all important Driver object that are needed by your steps to carry out actions against objects you have defined. It's not often that you need to change these unless you need to use a class that is not listed above.
+The initial import statement allows you to add classes relating to test steps, test settings, and By functions etc. that are needed by the script to carry out actions against objects you have defined. For basic tests the above included classes shoudl suffice.  You will need to review these if you require further functionality from other classes that are not listed above.
 
-The importing of the assert class is useful if you would like to use assertions to capture and verify strings/integers or any data retrieved from objects durign test execution. This can also be reported in the console.
+The importing of the assert class is useful if you would like to use assertions to capture and verify strings/integers or any data retrieved from objects during test execution. This can also be reported in the console.
 
 b. **export consts settings { ... }**
 
 ```typescript
 export const settings: TestSettings = {
-	// loopCount: 1,
-	device: Device.iPadLandscape,
+	loopCount: 50,
+	description: 'The Flood Store - Detailed Tutorial',
+	screenshotOnFailure: true,
 	disableCache: true,
-	actionDelay: 0.5,
+	//clearCache: true,
+	clearCookies: true,
+	actionDelay: 1.5,
 	stepDelay: 2.5,
+}
 ```
 
 This export block allows you to specify constants related to typical Test Settings used in all load tests:
 
 * loopCount: Used to specify how many iterations (or loops) you would like each user to run. If commented out or not included - the test will run forever.
 
-* device: This allows you to be able to simulate a user using a specific device in a specific mode of operation.
+* description: A simple description sentence describing the aim of the test scenario.
 
-* disableCache: No caching is done if this is set to true.
+* screenshotOnFailure: A screenshot of the current page will automatically be generated when Flood Chrome detects a failure has occurred. These are viewable in the captured results for each Flood.
+
+* disableCache / clearCache: No caching is done if this is set to true.
+
+* clearCookies: Any cookies detected will be cleared for each iteration if this is set to true.
 
 * actionDelay: the amount of time in seconds that the Flood Chrome replay engine will wait in between actions contained within a step.
 
@@ -74,14 +82,14 @@ The first step we will use contains the step to tell Flood Chrome to visit the i
 ![The Flood Store - Homepage](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/step-1-homepage.png)
 
 ```typescript
-step('The Flood Store: Home', async browser => {
-	await browser.visit('https://jriz.io')
+	step('The Flood Store: Home', async browser => {
 
-	let pageTextVerify = By.visibleText(
-		'Welcome to the Flood IO Merchandise Store',
-	)
-	await browser.wait(Until.elementIsVisible(pageTextVerify))
-})
+		await browser.visit('https://jriz.io')
+
+		let pageTextVerify = By.visibleText("Welcome to the Flood IO Merchandise Store.")
+		await browser.wait(Until.elementIsVisible(pageTextVerify))
+
+	})
 ```
 
 Every step should be named appropriately to tell us what functionality is taking place (and how long does it take) within the step contents. So for this step we are timing how long the target URL takes to load from a user's perspective and also the verification that we are on the correct page.
@@ -194,17 +202,18 @@ b. Click on the ellipsis link (...) and click Copy > Copy selector.
 This will copy the exact CSS selector path that can be used in your step as follows:
 
 ```typescript
-step('The Flood Store: Proceed to Checkout', async (browser: Driver) => {
-	let lnkProceedToCheckout = By.css(
-		'#post-14 > div > div > div > div > div > a',
-	)
-	await browser.wait(Until.elementIsVisible(lnkProceedToCheckout))
-	let element = await browser.findElement(lnkProceedToCheckout)
-	await element.click({ button: MouseButtons.LEFT })
+	step('The Flood Store: Proceed to Checkout', async browser => {
 
-	let pageTextVerify = By.visibleText('Returning customer?')
-	await browser.wait(Until.elementIsVisible(pageTextVerify))
-})
+		let lnkProceedToCheckout = By.css('#post-14 > div > div > div > div > div > a')
+		await browser.wait(Until.elementIsVisible(lnkProceedToCheckout))
+		let element = await browser.findElement(lnkProceedToCheckout)
+		await element.focus()
+		await element.click()
+
+		let pageTextVerify = By.visibleText("Returning customer?")
+		await browser.wait(Until.elementIsVisible(pageTextVerify))
+
+	})
 ```
 
 In this case our Selector produced: '#post-14 > div > div > div > div > div > a' which is what can be used in the By.css step above.
@@ -214,16 +223,19 @@ In this case our Selector produced: '#post-14 > div > div > div > div > div > a'
 Filling out a form with a number of text entry fields can be very easily achieved with Flood Chrome. All we need to do is to find out the CSS or unique input ID of the field we would like to enter text into and include it in a step as follows:
 
 ```typescript
-step('The Flood Store: Checkout Data Entry', async (browser: Driver) => {
-	// Fill in text field - billing First Name
-	await browser.type(By.id('billing_first_name'), 'Jason')
+	step('The Flood Store: Checkout Data Entry', async browser => {
 
-	// Fill in text field - billing First Name
-	await browser.type(By.id('billing_last_name'), 'Rizio')
+	    //let billingFirstName = await browser.findElement(By.id('billing_first_name'))
 
-	// Fill in text field - billing Company
-	await browser.type(By.id('billing_company'), 'Flood IO')
-})
+	   	// Fill in text field - billing First Name
+		await browser.type(By.id('billing_first_name'), "Jason")
+
+	   	// Fill in text field - billing First Name
+		await browser.type(By.id('billing_last_name'), "Rizio")
+
+		//...	
+
+	})
 ```
 
 As you can see, a simple line of code per field containing the text string needing to be entered is all that is required to fill out a form.
@@ -233,22 +245,25 @@ As you can see, a simple line of code per field containing the text string needi
 We have now almost completed the full item purchase business process. All that is left is to click the place order button using the following step:
 
 ```typescript
-step('The Flood Store: Place Order', async (browser: Driver) => {
-	let btnPlaceOrder = By.id('place_order')
-	await browser.wait(Until.elementIsVisible(btnPlaceOrder))
-	let element = await browser.findElement(btnPlaceOrder)
-	await element.click({ button: MouseButtons.LEFT })
+	step('The Flood Store: Place Order', async browser => {
 
-	let pageTextVerify = By.visibleText(
-		'Thank you. Your order has been received.',
-	)
-	await browser.wait(Until.elementIsVisible(pageTextVerify))
-})
+		let btnPlaceOrder = By.id('place_order')
+		await browser.wait(Until.elementIsVisible(btnPlaceOrder))
+		let element = await browser.findElement(btnPlaceOrder)
+		await element.focus()
+		await element.click()	
+
+		let pageTextVerify = By.visibleText("Thank you. Your order has been received.")
+		await browser.wait(Until.elementIsVisible(pageTextVerify))
+
+		await browser.takeScreenshot()
+
+	})	
 ```
 
 When an object has a unique id, it makes our scripting very easy to describe the object. Here the button has an id called 'place_order' which is all we need to use in order to interact with the object successfully.
 
-This step is almost identicial to the one in Step 4 except the usage of the id in this case. We are still clicking on the button with the LEFT mouse button and then verifying the order has gone through by verifying the expected text 'Thank you. Your order has been received'.
+This step is almost identicial to the one in Step 4 except the usage of the id in this case. We are still clicking on the button and then verifying the order has gone through by verifying the expected text 'Thank you. Your order has been received'.
 
 ## Conclusion
 
