@@ -8,7 +8,7 @@ title: Deep Dive Tutorial
 
 This detailed example will show you how to actually build a working Flood Chrome script that uses a variety of different classes to identify objects you would like to interact with in order to successfully simulate a typical business process.
 
-The example uses a site called 'The Flood Store' - a fictional online shopping store that sells Flood IO-branded apparel and other clothing items. It is fairly representative of a typical online store that customers may require to be load tested but is complex enough that using a traditional load test tool such as Jmeter or Gatling requires a lot of work in scripting against.
+The example uses a site called 'The Flood Store' - a fictional online shopping store that sells Tricentis Flood branded apparel and other clothing items. It is fairly representative of a typical online store that customers may require to be load tested but is complex enough that using a traditional load test tool such as Jmeter or Gatling requires a lot of work in scripting against.
 
 It is built using Wordpress and the Woocommerce plug-in.
 
@@ -16,7 +16,7 @@ We'll show you how you can achieve creating a full user item purchase scenario q
 
 ## Tools Used
 
-1. **A Flood IO Account** - You will need a Flood IO account in order to run Flood Chrome scripts with more than 1 concurrent user.
+1. **A Tricentis Flood Account** - You will need a Flood account in order to run Flood Chrome scripts with more than 1 concurrent user.
 2. **Flood CLI (optional)** - The CLI tool is a great way to verify your script compiles correctly before running it on the Flood platform.
 3. **Google Chrome (optional)** - Flood Chrome identifies page objects by individual properties or identifiers. The Google Chrome browser contains the ability to inspect object properties in realtime. These properties are used by the Flood Chrome script in order to interact with the given page object.
 
