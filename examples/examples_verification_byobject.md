@@ -1,8 +1,8 @@
 ---
-title: Examples - Page Verification
+title: Examples - Verification - By Object
 ---
 
-# Examples - Object Verification
+# Examples - Verification - By Object
 
 ## Using XPATH
 

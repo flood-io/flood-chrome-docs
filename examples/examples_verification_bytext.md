@@ -1,8 +1,8 @@
 ---
-title: Examples - Page Verification
+title: Examples - Verification - By Text
 ---
 
-# Examples - Page Verification
+# Examples - Verification - By Text
 
 ## Overview
 
