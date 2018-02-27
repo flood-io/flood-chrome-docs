@@ -3,6 +3,10 @@
  * [Quick Start](README.md)
  * [Deep Dive Tutorial](examples/scenario_1_wordpress.md)
 
+## Examples
+
+* [Page Verification](examples/examples_page_verification.md)
+
 ## Flood Chrome API
 
   * [BoundingBox](api/Interfaces.md#boundingbox)
@@ -15,7 +19,7 @@
   * [ElementHandle](api/ElementHandle.md#elementhandle)
   * [Key](api/Interfaces.md#key)
   * [Locatable](api/Interfaces.md#locatable)
-  * [Locator](api/Locator.md#locator)
+  * [Locato sr](api/Locator.md#locator)
   * [MouseButtons](api/Interfaces.md#mousebuttons)
   * [NavigationOptions](api/Interfaces.md#navigationoptions)
   * [ScreenshotOptions](api/Interfaces.md#screenshotoptions)
