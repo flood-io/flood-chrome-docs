@@ -7,8 +7,8 @@
 ## Examples
 
 * Page Verification
-* [By Text](examples/examples_page_verification.md)
-* [By Object Properties](examples/examples_object_verification.md)
+  * [ - By Text](examples/examples_page_verification.md)
+  * [ - By Object Properties](examples/examples_object_verification.md)
 
 ## Flood Chrome API
 
