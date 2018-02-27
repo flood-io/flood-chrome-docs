@@ -3,9 +3,13 @@
  * [Quick Start](README.md)
  * [Deep Dive Tutorial](examples/scenario_1_wordpress.md)
 
+
 ## Examples
 
+### Verification
+
 * [Page Verification](examples/examples_page_verification.md)
+* [Object Verification](examples/examples_object_verification.md)
 
 ## Flood Chrome API
 
