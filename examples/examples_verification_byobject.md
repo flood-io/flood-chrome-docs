@@ -1,8 +1,8 @@
 ---
-title: Examples - Verification - By Object
+title: Examples - Verification - By Object Properties
 ---
 
-# Examples - Verification - By Object
+# Examples - Verification - By Object Properties
 
 ## Using XPATH
 
