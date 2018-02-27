@@ -6,7 +6,7 @@
 
 ## Examples
 
-* Page Verification
+* [ Page Verification ](examples/examples_verification.md)
   * [ By Text](examples/examples_verification_bytext.md)
   * [ By Object Properties](examples/examples_verification_byobject.md)
 
