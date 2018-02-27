@@ -6,10 +6,10 @@
 
 ## Examples
 
-### Verification
+#### Page Verification
 
-* [Page Verification](examples/examples_page_verification.md)
-* [Object Verification](examples/examples_object_verification.md)
+* [By Strings](examples/examples_page_verification.md)
+* [By Object Properties](examples/examples_object_verification.md)
 
 ## Flood Chrome API
 
