@@ -207,6 +207,7 @@ export const settings = {
 thinking about what to do next.
 * `clearCache` <boolean> (Optional) Specifies whether Brwoser cache should be cleared after each loop.
 * `clearCookies` <boolean> (Optional) Specifies whether cookies should be cleared after each loop.
+* `consoleFilter` <[ConsoleMethod][]> (Optional) Filters the console output from the target site to log output. Useful for very noisy tests. This won't affect console output from within your script.
 * `description` <string> (Optional) Speicifies the description of the test specified in the comments section
 * `device` <string> (Optional) Specifies a device to emulate with browser device emulation.
 * `disableCache` <boolean> (Optional) Disables browser request cache for all requests.
@@ -216,6 +217,13 @@ Defaults to `-1` for no timeout.
 * `loopCount` <number> (Optional) Number of times to run this test.
 Defaults to `-1` for infinite.
 * `name` <string> (Optional) Speicifies the name of the test specified in the comments section
+* `responseTimeMeasurement` <[ResponseTiming]> (Optional) Configures how we record response time for each step.
+
+Possible values:
+- `"page"`: Record the document loading response time. This is usually what you consider response time on paged web apps.
+- `"network"`: Takes the mean response time of all network requests which occur during a step. This is useful for Single Page Application which don't actually trigger a navigation.
+- `"step"`: (Default) Records the wall clock time of a step. This is useful for Single Page Application which don't actually trigger a navigation.
+- `"stepWithThinkTime"`: Records the wall clock time of a step including `actionDelay` time.
 * `screenshotOnFailure` <boolean> (Optional) Take a screenshot of the page when a command fails, to aid in debugging.
 
 Screenshots are saved to `/flood/result/screenshots` in the test archive.
@@ -223,8 +231,14 @@ Screenshots are saved to `/flood/result/screenshots` in the test archive.
 * `userAgent` <string> (Optional) Specifies a custom User Agent (UA) string to send.
 * `waitTimeout` <number> (Optional) Global wait timeout applied to all wait tasks
 
+[ConsoleMethod]: Interfaces.md#consolemethod
+[ResponseTiming]: Interfaces.md#responsetiming
+# `ConsoleMethod`
+
 # `Driver`
 
 # `Locatable`
+
+# `ResponseTiming`
 
 # `StepFunction`
