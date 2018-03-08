@@ -1,6 +1,6 @@
 # `@flood/chrome`
 
-Flood Chrome brings the familiar power of traditional browser scripting tools with the proven performance of Flood to create an easy to use and maintainable performance testing tool.
+Flood Chrome brings the familiar power of traditional browser scripting tools together with the proven performance of Flood to create an easy-to-use and maintainable performance testing tool.
 
 Flood Chrome works by spinning up hundreds or even thousands of instances of Google Chrome, and running scripts you define here to drive a load test. We can this Browser Level Load Testing.
 
