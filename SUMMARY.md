@@ -10,6 +10,10 @@
   * [ By Text](examples/examples_verification_bytext.md)
   * [ By Object Properties](examples/examples_verification_byobject.md)
 
+* [ Link Navigation ](examples/examples_link_navigation.md)
+
+* [ Web Form Interaction ](examples/examples_webform_interaction.md)
+
 ## Flood Chrome API
 
   * [BoundingBox](api/Interfaces.md#boundingbox)
