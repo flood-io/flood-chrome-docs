@@ -4,15 +4,16 @@ Until is used to create wait <[Conditions]> which are used to wait for elements 
 
 You would typically use these to control the flow of you test.
 
-#### `until.ableToSwitchToFrame()`
+#### `until.ableToSwitchToFrame(frame)`
+* `frame` <string|number|[Locatable]>  
 * returns: <[Condition]> 
 
 Creates a condition that will wait until the input driver is able to switch to the designated frame.
 
 The target frame may be specified as:
-- numeric index into window.frames for the currently selected frame.
-- ElementHandle, which must references a FRAME or IFRAME element on the current page.
-- locator which may be used to first locate a FRAME or IFRAME on the current page before attempting to switch to it.
+- string name of the frame to wait for matching the frame's `name` or `id` attribute.
+- (Coming soon) numeric index into window.frames for the currently selected frame.
+- (Coming soon) locator which may be used to first locate a FRAME or IFRAME on the current page before attempting to switch to it.
 
 Upon successful resolution of this condition, the driver will be left focused on the new frame.
 
@@ -151,6 +152,6 @@ Creates a condition which waits until the page URL exactly matches the expected 
 Creates a condition which waits until the page URL matches the supplied `RegExp`.
 
 
-[Condition]: Condition.md#condition
 [Locatable]: Interfaces.md#locatable
+[Condition]: Condition.md#condition
 [Locator]: Locator.md#locator

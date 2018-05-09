@@ -12,6 +12,15 @@ export default () => {
 ```
 
 
+#### `browser.authenticate([, username, password])`
+* `username` <string> (Optional) 
+* `password` <string> (Optional) 
+* returns: <[Promise]<void>> 
+
+Sets the HTTP Authentication details to use if the page is presented with an authentication prompt.
+
+Call without any args to disable authentication.
+
 #### `browser.blur(locator)`
 * `locator` <[Locatable]>  
 * returns: <[Promise]<void>> 
@@ -66,6 +75,11 @@ currently outside the viewport it will first scroll to that element.
 * returns: <[Promise]<void>> 
 
 Configure Browser to emulate a given device
+
+#### `browser.evaluate(fn, args)`
+* `fn` <[EvaluateFn]>  
+* `args` <any[]>  
+* returns: <[Promise]<any>> 
 
 #### `browser.findElement(locator)`
 * `locator` <string|[Locator]>  
@@ -182,10 +196,11 @@ or a <[Condition]>, for more flexible conditions.
 
 
 [step]: Functions.md#step
-[Locatable]: Interfaces.md#locatable
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[Locatable]: Interfaces.md#locatable
 [ClickOptions]: Interfaces.md#clickoptions
 [Device]: Interfaces.md#device
+[EvaluateFn]: Interfaces.md#evaluatefn
 [Locator]: Locator.md#locator
 [TargetLocator]: TargetLocator.md#targetlocator
 [ScreenshotOptions]: Interfaces.md#screenshotoptions

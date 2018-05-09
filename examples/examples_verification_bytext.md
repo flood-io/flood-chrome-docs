@@ -28,3 +28,4 @@ You are also able to validate a resulting page using partial strings - as follow
 		let pageTextVerify = By.partialVisibleText('Welcome to')
 		await browser.wait(Until.elementIsVisible(pageTextVerify))
 ```
+

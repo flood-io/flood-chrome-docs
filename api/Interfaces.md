@@ -152,6 +152,17 @@ Specifies the available options to send when clicking to modify the click behavi
 Defaults to 0.
 
 [MouseButtons]: Interfaces.md#mousebuttons
+# `FloodProcessEnv`
+
+* `BROWSER_ID` <number>  
+* `FLOOD_GRID_INDEX` <number>  
+* `FLOOD_GRID_NODE_SEQUENCE_ID` <number>  
+* `FLOOD_GRID_REGION` <string>  
+* `FLOOD_GRID_SQEUENCE_ID` <number>  
+* `FLOOD_NODE_INDEX` <number>  
+* `FLOOD_PROJECT_ID` <number>  
+* `FLOOD_SEQUENCE_ID` <number>  
+
 # `NavigationOptions`
 
 This interface represents the available options to pass to <[Driver]>.visit()
@@ -189,6 +200,9 @@ step("Step 1", { waitTimeout: 300 }, async browser => {
 * `waitTimeout` <number> (Optional) Timeout in seconds for all wait and navigation operations within this <[step]>.
 
 [step]: Functions.md#step
+# `TestDataRow`
+
+
 # `TestSettings`
 
 This interface specifies the available options you can use to configure how your test runs. These properties should be exported using the property `settings`.
@@ -214,6 +228,7 @@ thinking about what to do next.
 * `duration` <number> (Optional) Maximum duration to run this for, regardless of other timeouts specified on Flood.
 
 Defaults to `-1` for no timeout.
+* `ignoreHTTPSErrors` <boolean> (Optional) Whether to ignore HTTPS errors during navigation. Defaults to `false`
 * `loopCount` <number> (Optional) Number of times to run this test.
 Defaults to `-1` for infinite.
 * `name` <string> (Optional) Speicifies the name of the test specified in the comments section
@@ -237,8 +252,11 @@ Screenshots are saved to `/flood/result/screenshots` in the test archive.
 
 # `Driver`
 
+# `EvaluateFn`
+
 # `Locatable`
 
 # `ResponseTiming`
 
 # `StepFunction`
+

@@ -51,3 +51,4 @@ For applications that may require a more stable scripting approach due to variat
 ```
 
 Here we wait for an element to be visible before proceeding as well as ensure we have application focus on the element before we click on it.
+
