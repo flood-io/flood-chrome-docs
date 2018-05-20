@@ -6,6 +6,7 @@
  * [Examples - Verification - By Text](examples/examples_verification_bytext.md)
  * [Examples - Page Verification](examples/examples_verification.md)
  * [Examples - Web Form Interaction](examples/examples_webform_interaction.md)
+ * [Examples - Test Data Generation ](examples/examples_data_generation.md)
  * [Deep Dive Tutorial](examples/scenario_1_wordpress.md)
 
 ## Flood Chrome API
