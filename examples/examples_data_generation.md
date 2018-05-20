@@ -14,17 +14,43 @@ To start using Faker within your Flood Chrome script you will need to import the
     import { random } from 'faker'
 ```
 
-## Using Random Numbers
+## Generating Random Numbers
 
-The simplest way to generate a random number using Faker is to declare the 'random' Faker object at the top of your Flood Chrome script:
-
-```typescript
-    import { random } from 'faker'
-```
-
-And then use the following in your Flood Chrome script step to generate a 5 digit random number between 0 and 99999:
+The simplest way to generate a random number using Faker is to declare the 'random' Faker object at the top of your Flood Chrome script and then use the following in your Flood Chrome script step to generate a 5 digit random number between 0 and 99999:
 
 ```typescript
         //Generate a random phone number
         var randNumber = random.number(99999).toString()
+```
+
+## Generating Person Names
+
+You are able to generate random first and surnames very easily:
+
+```typescript
+    //put this import statement at the top of your script
+    import { name } from 'faker'
+```
+
+```typescript
+        //Generate different types of names and related data
+        var randFirstname = name.firstName()
+        var randSurname = name.lastName()
+        var randJobTitle = name.jobTitle()
+        var randPrefix = name.prefix()
+```
+
+## Generating Email Addresses
+
+You are able to generate email addresses and other web related data using the following:
+
+```typescript
+    //put this import statement at the top of your script
+    import { internet } from 'faker'
+```
+
+```typescript
+        //Generate different types of names and related data
+        var randEmail = internet.email() ////returns "Timmy_Pacocha@gmail.com"
+        var randEmailProvider = internet.email("joe","smith","protonmail.com") //returns "joe.smith@protonmail.com"
 ```
