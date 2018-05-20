@@ -6,7 +6,7 @@ title: Examples - Test Data Generation
 
 ## Overview
 
-With the help of the incredible open-source Faker library [link](https://github.com/Marak/faker.js) - we can generate test data for use in Flood Chrome test very easily and on-the-fly. The Faker library allows us to generate a wide variety of syntax-correct data such as randome names, numbers, strings, emails etc.
+With the help of the incredible open-source Faker library [Faker.js](https://github.com/Marak/faker.js) - we can generate test data for use in Flood Chrome test very easily and on-the-fly. The Faker library allows us to generate a wide variety of syntax-correct data such as randome names, numbers, strings, emails etc.
 
 To start using Faker within your Flood Chrome script you will need to import the specific Faker library -for example for basic random data - we would use the following 'random' library:
 
