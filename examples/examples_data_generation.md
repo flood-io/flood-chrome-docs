@@ -42,7 +42,7 @@ You are able to generate random first and surnames very easily:
 
 ## Generating Email Addresses
 
-You are able to generate email addresses and other web related data using the following:
+You are able to generate email addresses and other web related test data using the following:
 
 ```typescript
     //put this import statement at the top of your script
