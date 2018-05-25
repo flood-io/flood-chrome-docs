@@ -2,10 +2,10 @@
 
 By is used to create <[Locator]>'s to find Elements or use in any place which accepts a Locator or <[Locatable]>.
 
-#### `by.attr(tagName, attrName[, attrValue])`
+#### `by.attr(tagName, attributeName[, value])`
 * `tagName` <string>  TagName to scope selection to
-* `attrName` <string>  The attribute to search for
-* `attrValue` <string> (Optional) Optional attribute value to compare
+* `attributeName` <string>  The attribute to search for
+* `value` <string> (Optional) Optional attribute value to compare
 * returns: <[Locator]> 
 
 Finds an element containing a specified attribute value
@@ -33,6 +33,12 @@ Recives a function which runs on the page and returns an element or elements.
 * returns: <[Locator]> 
 
 Locates a link containing the specified text.
+
+#### `by.nameAttr(value)`
+* `value` <string>  The name attribute to search for.
+* returns: <[Locator]> 
+
+Locates elements whose `name` attribute has the given value.
 
 #### `by.partialLinkText(text)`
 * `text` <string>  

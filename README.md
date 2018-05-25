@@ -6,7 +6,7 @@ Flood Chrome works by spinning up hundreds or even thousands of instances of Goo
 
 > This project is currently in beta and APIs are subject to change.
 
-![Flood Chrome Example code](./code-snippet.png)
+![Flood Chrome Example code](./docs/code-snippet.png)
 
 # Quickstart
 
@@ -97,3 +97,4 @@ If you encounter any issues with the `@flood/chrome` project or Flood Chrome pro
 
 If you're encountering issues with Flood itself, please contact Flood Support from within the Flood Dashboard.
 
+[flood]: Flood.md#flood

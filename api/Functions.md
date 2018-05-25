@@ -1,15 +1,3 @@
-#### `loadTestData(filePath)`
-* `filePath` <string>  a path relative to root which contains the test data
-* returns: <[Promise]<[TestDataRow][]>> 
-
-Loads test data from the test directory to use in your test.
-
-Supported formats:
-- **CSV**: When loading CSV, you'll receive an array of objects for each row keyed by header
-- **JSON**: When loading JSON, the root object should be an array of objects
-
-
-[Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 #### `setup(settings)`
 * `settings` <[TestSettings]>  
 * returns: <void> 
