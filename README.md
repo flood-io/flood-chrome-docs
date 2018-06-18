@@ -82,9 +82,9 @@ Over the years, countless customers have mentioned that getting started with Loa
 ## What can I do with it?
 
 * Flood Chrome can be used to **put load on any web accessible application** and measure how it performs as load is ramped up,
-* **Measure performance regressions** after deploys by integrating it with you CI/CD pipeline,
-* Measure how your application's response time from different regions as experienced by your customers,
-* Create **realistic load scenarios** which stress test your network infrastructure without developing a complex protocol level load test scripts.
+* **Measure performance regressions** after deploys by integrating it with your CI/CD pipeline,
+* Measure your application's response time from different regions as experienced by your customers,
+* Create **realistic load scenarios** which stress test your network infrastructure without developing complex protocol level load test scripts.
 
 ## Documentation
 
