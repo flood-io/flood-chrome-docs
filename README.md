@@ -6,6 +6,8 @@ Flood Chrome works by spinning up hundreds or even thousands of instances of Goo
 
 > This project is currently in beta and APIs are subject to change.
 
+> Please Note: A full help sub-site is available [here](https://element.flood.io) which contains syntax, examples and a deep dive tutorial.
+
 ![Flood Chrome Example code](./docs/code-snippet.png)
 
 # Quickstart
