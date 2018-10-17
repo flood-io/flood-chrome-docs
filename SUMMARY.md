@@ -7,6 +7,7 @@
 * [Examples - Page Verification](examples/examples_verification.md)
 * [Examples - Test Data Generation ](examples/examples_data_generation.md)
 * [Examples - Web Form Interaction](examples/examples_webform_interaction.md)
+* [Detailed Example - Modal / Pop-up handling](examples/modal_popup_handling.md)
 * [Deep Dive Tutorial](examples/scenario_1_wordpress.md)
 
 ## Flood Chrome API
