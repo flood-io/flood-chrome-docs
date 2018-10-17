@@ -92,7 +92,7 @@ d. **Execution Results**
 
 Including one or more __checkForModal steps will also be displayed as part of your transaction labels when running the test through the Flood platform. These steps response times can be ignored as they aren't intended to be used to analyse response times but rather carry out the functionality to detect and clear the modal pop-ups. In a future version of Flood Element we will have the ability to mark these steps as 'Do not display' to make it clearer on the dashboard.
 
-![Sample Execution Results](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/flood_checkmodal.png)
+![Sample Execution Results](https://raw.githubusercontent.com/flood-io/flood-chrome-docs/master/examples/images/flood_checkmodal.png)
 
 __checkForModal transactions are highlighted above and the applicable response times for these should be ignored as they are just displayed for completeness. As you can see __checkForModal1 shows a response time of ~5 seconds which is the timeout used to try and detect the close (x) button element.
 
