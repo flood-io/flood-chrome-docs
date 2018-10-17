@@ -36,7 +36,7 @@ async function checkForModal(browser) {
 ```
 Here we define a function (called checkForModal) thats sole purpose is to check that an element of the modal pop-up is currently active and being displayed to the user. This function can be re-used in multiple steps depending on where you expect the pop-up to appear. You can also use this function on every step if your pop-up is randomly selected to appear at any time.
 
-We've chosen the CSS selector for the close (x) button img which has it's selector as ```typescript div > img```
+We've chosen the CSS selector for the close (x) button img which has it's selector as ```div > img```
 
 If we don't see the close (x) button element then we simply log a message saying that we didn't see it within the expected timeframe.
 
